@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="liveroom_img_w">55dip</dimen>
+    <dimen name="liveroom_header_tv">12dip</dimen>
+    <dimen name="liveroom_title_tv1">15dip</dimen>
+    <dimen name="liveroom_title_tv2">13dip</dimen>
+    <dimen name="liveroom_divider_h">0.5dip</dimen>
+    <dimen name="liveroom_networkface_h">20dip</dimen>
+    <dimen name="text_lineSpacingExtra">8dip</dimen>
+</resources>

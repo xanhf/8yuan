@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"/>
+
+    <LinearLayout
+        android:id="@+id/linear_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        android:background="@drawable/white_round"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:gravity="center"
+            android:text="输入银行卡密码"
+            android:textColor="@color/app_common_content"
+            android:textSize="17sp"
+            android:lineSpacingExtra="@dimen/margin_4dp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:text="招商银行:333333 **** *** 3333"
+            android:lineSpacingExtra="@dimen/margin_4dp"/>
+        <!-- 6位密码框布局，需要一个圆角边框的shape作为layout的背景 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:orientation="horizontal">
+
+			<!-- inputType设置隐藏密码明文
+			     textSize设置大一点，否则“点”太小了，不美观 -->
+            <TextView
+                android:id="@+id/tv_pass1"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="32sp"
+                android:background="#f5f5f6"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_pass2"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:background="#f5f5f6"
+                android:inputType="numberPassword"
+                android:textSize="32sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_pass3"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:background="#f5f5f6"
+                android:textSize="32sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_pass4"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:textSize="32sp"
+                android:background="#f5f5f6"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_pass5"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:background="#f5f5f6"
+                android:inputType="numberPassword"
+                android:textSize="32sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_pass6"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:gravity="center"
+                android:background="#f5f5f6"
+                android:inputType="numberPassword"
+                android:textSize="32sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_0.5dp"
+            android:background="@color/c_E6E7EA_70"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnNav"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/dialog_login_cancle"
+                android:textColor="@color/grey"
+                android:text="@string/lable_cashin_cancle"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_weight="1.0"/>
+            <View
+                android:layout_width="@dimen/margin_0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/c_E6E7EA_70"/>
+            <Button
+                android:id="@+id/btnPos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/dialog_login_submit"
+                android:textColor="@color/c_BB8B7D"
+                android:text="@string/btn_ok"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_weight="1.0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 输入键盘 -->
+    <GridView
+        android:id="@+id/gv_keybord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#bcb9c3"
+        android:horizontalSpacing="0.5dp"
+        android:numColumns="3"
+        android:listSelector="@null"
+        android:verticalSpacing="0.5dp" />
+</LinearLayout>

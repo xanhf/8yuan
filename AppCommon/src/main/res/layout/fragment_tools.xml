@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_my_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_44dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingRight="@dimen/margin_16dp"
+        android:text="@string/lable_setting"
+        android:textColor="@color/c_464646"
+        android:textSize="@dimen/text_size_15sp" />
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="800dip">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/line_goloin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:text="Scott"
+                    android:textColor="@color/c_464646"
+                    android:textSize="@dimen/text_size_28sp" />
+                <!-- android:background="@drawable/bg_btn_white"-->
+                <com.trade.eight.view.CircleImageView
+                    android:id="@+id/img_useravatar"
+                    android:layout_width="@dimen/margin_80dp"
+                    android:layout_height="@dimen/margin_80dp"
+                    android:scaleType="fitXY"
+                    android_custom:circle_style="round"
+                    android_custom:roundradius="3dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line_unlogin_qihuo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_70dp"
+                android:layout_marginLeft="@dimen/margin_11dp"
+                android:layout_marginRight="@dimen/margin_11dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:background="@drawable/img_moneybord_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center|left"
+                    android:text="@string/lable_myaccount"
+                    android:textColor="@color/c_464646"
+                    android:textSize="@dimen/text_size_20sp" />
+
+                <TextView
+                    android:id="@+id/text_gocashin"
+                    android:layout_width="@dimen/margin_60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin_2dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right|center"
+                    android:text="@string/lable_loginqihuo"
+                    android:textColor="@color/c_BB8B7D"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_24dp"
+                    android:layout_height="@dimen/margin_24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_16dp"
+                    android:src="@drawable/img_trade_arrow_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line_belogin_qihuo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_11dp"
+                android:layout_marginRight="@dimen/margin_11dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_241dp">
+
+                    <LinearLayout
+                        android:id="@+id/line_myaccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_200dp"
+                        android:background="@drawable/img_moneybord_bg"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_24dp"
+                            android:layout_marginLeft="@dimen/margin_16dp"
+                            android:layout_marginRight="@dimen/margin_16dp"
+                            android:layout_marginTop="@dimen/margin_16dp"
+                            android:layout_marginBottom="@dimen/margin_16dp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/text_myaccount_qihuo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_24dp"
+                                android:layout_marginRight="@dimen/margin_2dp"
+                                android:gravity="right|center"
+                                android:text="@string/lable_myaccount"
+                                android:textColor="@color/c_464646"
+                                android:textSize="@dimen/text_size_20sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0" />
+
+
+                            <TextView
+                                android:id="@+id/text_myaccount_loginout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/margin_24dp"
+                                android:layout_marginRight="@dimen/margin_2dp"
+                                android:gravity="right|center"
+                                android:text="@string/lable_myaccount_loginout"
+                                android:textColor="@color/c_BB8B7D"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20dp"
+                            android:layout_marginRight="@dimen/margin_20dp"
+                            android:layout_marginTop="@dimen/margin_10dp">
+
+                            <LinearLayout
+                                android:id="@+id/line_moneyzy_rate"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/c_464646"
+                                        android:textSize="@dimen/text_size_18sp"
+                                        android:text="--"
+                                        android:textStyle="bold"
+                                        android:id="@+id/text_moneyzy_rate"/>
+                                    <ImageView
+                                        android:layout_width="@dimen/margin_24dp"
+                                        android:layout_height="@dimen/margin_24dp"
+                                        android:src="@drawable/img_tradenotify_1"
+                                        android:layout_marginLeft="@dimen/margin_4dp"
+                                        android:padding="4dp"
+                                        android:visibility="gone"
+                                        android:id="@+id/img_tradeinfo_dangerous"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:text="@string/lable_moneyzy_rate"
+                                    android:textColor="@color/c_999999_70"
+                                    android:textSize="@dimen/text_size_12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line_money_dqqy"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_money_dqqy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="--"
+                                    android:textColor="@color/c_464646"
+                                    android:textSize="@dimen/text_size_18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:text="@string/lable_money_dqqy"
+                                    android:textColor="@color/c_999999_70"
+                                    android:textSize="@dimen/text_size_12sp" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn_my_help"
+                                android:layout_width="@dimen/margin_24dp"
+                                android:layout_height="@dimen/margin_24dp"
+                                android:layout_marginLeft="@dimen/margin_4dp"
+                                android:background="@drawable/img_hometrade_help" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_20dp"
+                            android:layout_marginRight="@dimen/margin_20dp"
+                            android:layout_marginTop="@dimen/margin_10dp">
+
+                            <LinearLayout
+                                android:id="@+id/line_moneyzy_kyzj"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_moneyzy_kyzj"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="--"
+                                    android:textColor="@color/c_464646"
+                                    android:textSize="@dimen/text_size_18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:text="@string/lable_moneyzy_kyzj"
+                                    android:textColor="@color/c_999999_70"
+                                    android:textSize="@dimen/text_size_12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line_moneyzy_dyyk"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_moneyzy_dyyk"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="--"
+                                    android:textColor="@color/c_464646"
+                                    android:textSize="@dimen/text_size_18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_5dp"
+                                    android:text="@string/trade_hold_totalprofit"
+                                    android:textColor="@color/c_999999_70"
+                                    android:textSize="@dimen/text_size_12sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/margin_24dp"
+                                android:layout_height="@dimen/margin_24dp"
+                                android:layout_marginLeft="@dimen/margin_4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_55dp"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="@dimen/margin_6dp"
+                        android:paddingRight="@dimen/margin_6dp">
+
+                        <Button
+                            android:id="@+id/btn_my_cashin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/bg_btn_cashin_me"
+                            android:text="@string/lable_cashin"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btn_my_cashout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/bg_btn_cashout_me"
+                            android:text="@string/lable_cashout"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20dp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp"
+                    android:layout_marginTop="@dimen/margin_20dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_15dp"
+                        android:layout_height="@dimen/margin_14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_my_orders_icon" />
+
+                    <TextView
+                        android:id="@+id/text_my_orders"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4dp"
+                        android:layout_weight="1.0"
+                        android:text="@string/lable_my_orders"
+                        android:textColor="@color/c_464646"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_15dp"
+                        android:layout_height="@dimen/margin_14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_my_hisorders_icon" />
+
+                    <TextView
+                        android:id="@+id/text_my_hisorders"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4dp"
+                        android:layout_weight="1.0"
+                        android:text="@string/lable_my_hisorders"
+                        android:textColor="@color/c_464646"
+
+                        android:textSize="@dimen/text_size_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_20dp"
+                    android:layout_marginLeft="@dimen/margin_5dp"
+                    android:layout_marginRight="@dimen/margin_5dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_15dp"
+                        android:layout_height="@dimen/margin_14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_my_qihuo_am_icon" />
+
+                    <TextView
+                        android:id="@+id/text_my_qihuo_am"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4dp"
+                        android:layout_weight="1.0"
+                        android:text="@string/lable_my_qihuo_am"
+                        android:textColor="@color/c_464646"
+
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_15dp"
+                        android:layout_height="@dimen/margin_14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_my_cashhistory_icon" />
+
+                    <TextView
+                        android:id="@+id/text_my_cashhistory"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4dp"
+                        android:layout_weight="1.0"
+                        android:text="@string/lable_my_cashhistory"
+                        android:textColor="@color/c_464646"
+                        android:textSize="@dimen/text_size_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_newuser"
+                style="@style/MeItemStyle"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/MeItemTextStyle"
+                        android:text="@string/lable_my_newuser" />
+
+                    <ImageView style="@style/MeItemIconMoreStyle" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_kefu"
+                style="@style/MeItemStyle">
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/MeItemTextStyle"
+                        android:text="@string/lable_my_kefu_online" />
+
+                    <ImageView style="@style/MeItemIconMoreStyle" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70" />
+
+            <LinearLayout
+                android:id="@+id/ll_kefu_phone"
+                style="@style/MeItemStyle"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/MeItemTextStyle"
+                        android:text="@string/lable_my_kefu_phone" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="20dip"
+                        android:textColor="@color/c_999999_70"
+                        android:textSize="14sp"
+                        android:text="@string/lable_my_kefu_phonenum"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        style="@style/MeItemIconMoreStyle"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_messagecente"
+                style="@style/MeItemStyle"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/MeItemTextStyle"
+                        android:text="@string/lable_my_messagecenter" />
+
+                    <ImageView style="@style/MeItemIconMoreStyle" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_my_aboutus"
+                style="@style/MeItemStyle">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/MeItemTextStyle"
+                        android:text="@string/lable_my_aboutus" />
+
+                    <ImageView style="@style/MeItemIconMoreStyle" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70" />
+
+            <LinearLayout
+                android:id="@+id/ll_checkupdate"
+                style="@style/MeItemStyle"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/tv_versionLab"
+                        style="@style/MeItemTextStyle"
+                        android:text="版本检测" />
+
+                    <TextView
+                        android:id="@+id/tv_versionNew"
+                        android:layout_width="10dip"
+                        android:layout_height="10dip"
+                        android:layout_margin="5dip"
+                        android:layout_toRightOf="@+id/tv_versionLab"
+                        android:background="@drawable/red_circle"
+                        android:visibility="gone"
+                        android:textColor="@color/c_999999_70"/>
+
+                    <TextView
+                        android:id="@+id/tv_update_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/margin_16dp"
+                        android:gravity="center"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="20dip"
+                        android:textColor="@color/c_999999_70"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        style="@style/MeItemIconMoreStyle"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:background="@color/c_E6E7EA_70" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_20dp" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_layout_common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/backLayout"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_16dp">
+
+                <ImageView
+                    android:id="@+id/img_goodsact_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/text_lable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_45dp"
+                    android:gravity="center"
+                    android:text="特权卡"
+                    android:textColor="@color/white_40"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/text_giftname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_lable"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_25sp" />
+
+                <TextView
+                    android:id="@+id/text_giftpoins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_giftname"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:gravity="center"
+                    android:textColor="@color/white_50"
+                    android:textSize="@dimen/text_size_15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="44dip"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_giftpoins_debeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_28dp"
+                        android:gravity="bottom"
+                        android:textColor="@color/integral_poin_orange"
+                        android:textSize="@dimen/text_size_24sp" />
+
+                    <TextView
+                        android:id="@+id/text_rebatinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_16dp"
+                        android:background="@drawable/bg_btn_integralpoin"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:textColor="@color/integral_poin_orange"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_28dp"
+                        android:gravity="right|bottom"
+                        android:text="兑换成功"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_16dp"
+                        android:gravity="right"
+                        android:id="@+id/text_extime"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_8dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_8dp"
+                android:background="@color/sub_bg"/>
+
+            <TextView
+                android:id="@+id/text_giftdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16dp"
+                android:lineSpacingExtra="@dimen/margin_4dp"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/text_giftauthdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:lineSpacingExtra="@dimen/margin_4dp"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/text_giftrule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:lineSpacingExtra="@dimen/margin_4dp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/text_giftmask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"
+                android:layout_marginBottom="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:textSize="@dimen/text_size_12sp"
+                android:text="注：每人只能抢购1种特权卡"
+                android:textColor="@color/integral_poin_orange" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_20dp"
+                android:background="@color/sub_bg"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

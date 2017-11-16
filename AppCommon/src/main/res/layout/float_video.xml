@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="168dip"
+        android:layout_height="95dip">
+
+        <com.pili.pldroid.player.widget.PLVideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/video_empty_layout_float" />
+
+
+        <RelativeLayout
+            android:id="@+id/loadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <com.trade.eight.view.AppLoadingLayout
+                android:id="@id/layoutLoding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <!--如果直接像直播室那样子 使用RelativeLayout 放在上面响应点击事件的话；窗口就不能拖动-->
+        <RelativeLayout
+            android:id="@+id/closeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dip">
+
+            <ImageView
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:src="@drawable/img_live_btn_closewindow" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

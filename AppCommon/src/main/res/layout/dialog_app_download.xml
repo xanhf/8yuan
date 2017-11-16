@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/common_round"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dip">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="准备下载..."
+                android:textColor="@color/app_common_content"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:text="--"
+                android:textColor="@color/app_common_content"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:max="100" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/doback_btn"
+        android:layout_width="120dip"
+        android:layout_height="40dip"
+        android:background="@drawable/login_bg_btn_ok"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

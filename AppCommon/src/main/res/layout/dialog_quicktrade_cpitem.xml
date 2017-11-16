@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_exchangename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:text="哈贵所"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_15sp"
+        android:visibility="gone"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_product_0"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_63dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/liveroom_choosepro">
+
+            <RelativeLayout
+                android:id="@+id/rel_product_anim0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_productname_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <TextView
+                    android:id="@+id/text_productrate_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_productname_0"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:text="4000"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_product_1"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_63dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/liveroom_choosepro">
+
+            <RelativeLayout
+                android:id="@+id/rel_product_anim1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_productname_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <TextView
+                    android:id="@+id/text_productrate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_productname_1"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:text="4000"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_product_2"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_63dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/liveroom_choosepro">
+
+            <RelativeLayout
+                android:id="@+id/rel_product_anim2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_productname_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <TextView
+                    android:id="@+id/text_productrate_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_productname_2"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:text="4000"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

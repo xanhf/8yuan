@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_app_bg">
+
+    <include layout="@layout/trade_money_info"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip">
+
+            <RelativeLayout
+                android:id="@+id/lable01"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.trade.eight.view.UnderLineTextView
+                    android:id="@+id/tab1tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="建仓"
+                    android:textColor="@color/color_trade_list_tab"
+                    android:textSize="@dimen/text_size_15sp"
+                    app:isBlodWhileSelected="true"
+                    app:isLineEnable="false"
+                    app:isLineEnableWhileSelected="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lable02"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.trade.eight.view.UnderLineTextView
+                    android:id="@+id/tab2tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="持仓"
+                    android:textColor="@color/color_trade_list_tab"
+                    android:textSize="@dimen/text_size_15sp"
+                    app:isBlodWhileSelected="true"
+                    app:isLineEnable="false"
+                    app:isLineEnableWhileSelected="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lable03"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.trade.eight.view.UnderLineTextView
+                    android:id="@+id/tab3tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="资金"
+                    android:textColor="@color/color_trade_list_tab"
+                    android:textSize="@dimen/text_size_15sp"
+                    app:isBlodWhileSelected="true"
+                    app:isLineEnable="false"
+                    app:isLineEnableWhileSelected="false" />
+
+                <TextView
+                    android:id="@+id/tvMoneyDot"
+                    android:layout_width="8dip"
+                    android:layout_height="8dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/tab3tv"
+                    android:background="@drawable/red_circle"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llImage"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/cursor"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:background="@color/under_line"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:background="@null" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:background="@null" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tradeViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+</LinearLayout>

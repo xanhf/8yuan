@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dip"
+        android:visibility="gone">
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dip"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:horizontalSpacing="10dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:scrollbars="vertical"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+
+        <!--<include layout="@layout/app_layout_common_line" />-->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginBottom="20dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="100dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:gravity="left|center_vertical"
+                android:text="小额充值"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/ed_number"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:text="请选择"
+                android:textColor="@color/black"
+                android:textColorHint="@color/trade_choose_hit"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/viewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="0dip"
+                    android:src="@drawable/trade_icon_more_down" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginBottom="20dip"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="0dip"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="0dip"
+                android:gravity="left|center_vertical"
+                android:text="当前选择金额："
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_totalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="0dip"
+                android:layout_marginTop="5dip"
+                android:background="@color/white"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:text=""
+                android:textColor="@color/trade_up"
+                android:textColorHint="@color/trade_up"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2dip"
+                android:gravity="left|center_vertical"
+                android:text="元"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_margin="10dip"
+            android:background="@drawable/trade_money_btn_cz"
+            android:gravity="center"
+            android:text="去充值"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+    <include layout="@layout/app_common_progressbar"
+        />
+</LinearLayout>

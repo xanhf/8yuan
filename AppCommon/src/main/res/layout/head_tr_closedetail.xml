@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginLeft="@dimen/margin_11dp"
+        android:layout_marginRight="@dimen/margin_11dp"
+        android:background="@drawable/img_moneybord_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_20dp"
+        android:paddingLeft="@dimen/margin_20dp"
+        android:paddingTop="@dimen/margin_20dp"
+        android:paddingRight="@dimen/margin_20dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_20sp"
+                android:id="@+id/text_product_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_buytype"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp"
+                android:id="@+id/text_buynum"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平仓盈亏"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:id="@+id/text_close_profitloss"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_weight="1.0"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际盈亏"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:id="@+id/text_tr_profitloss"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_weight="1.0"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="持仓均价"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_tr_ccjj"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_15sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="建仓均价"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_tr_jcjj"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_24dp"
+            android:layout_height="@dimen/margin_24dp"
+            android:layout_gravity="center"
+            android:id="@+id/img_expand_packup"
+            android:src="@drawable/img_deal_btn_expand" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/c_E6E7EA_70"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp" />
+
+</LinearLayout>

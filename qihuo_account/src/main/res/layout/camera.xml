@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cameratest.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true" >
+
+        <!--
+        <com.cairh.app.sjkh.ui.MySurfaceview
+            android:id="@+id/surfaceView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.cairh.app.sjkh.ui.BorderViewN
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        -->
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cameraMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="请将方框对准身份证拍摄"
+        android:textColor="#00FF00"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/take"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#20000000"
+            android:text="拍  照"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#20000000"
+            android:text="取  消"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</RelativeLayout>

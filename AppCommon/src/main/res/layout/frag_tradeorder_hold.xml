@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <com.trade.eight.view.pulltorefresh.PullToRefreshExpandListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/optional_title"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dip"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/margin_40dp"/>
+
+    <LinearLayout
+        android:id="@+id/optional_title_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_24dp"
+            android:id="@+id/line_holdtabs">
+
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center|left">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:text="合约"
+                    android:textColor="@color/c_464646"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <ImageView
+                    android:id="@+id/img_btnhelp_pop"
+                    android:layout_width="@dimen/margin_24dp"
+                    android:layout_height="@dimen/margin_24dp"
+                    android:src="@drawable/img_hometrade_help" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/trade_order_ccjj"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/text_lable_3"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="最新价"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/text_lable_4"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="right|center"
+                android:text="@string/trade_hold_profit"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/empty_view_1"
+        android:visibility="gone"
+        android:background="@color/transparent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dip"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center">
+            <include layout="@layout/app_layout_nodata" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:text="@string/order_holdtips"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/c_999999_80"
+        android:textSize="@dimen/text_size_12sp"
+        android:id="@+id/text_orderhold_tips"/>
+</RelativeLayout>

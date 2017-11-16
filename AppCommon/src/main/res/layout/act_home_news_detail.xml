@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_app_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <com.trade.eight.view.AppTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"></com.trade.eight.view.AppTitleView>
+
+
+    <!--<RelativeLayout
+        android:id="@+id/heand_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@drawable/bg_nav_bar"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/backView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dip">
+
+            <include layout="@layout/app_layout_backview" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/ad_tv"
+            android:layout_toRightOf="@+id/backView"
+            android:gravity="center"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip"
+            android:singleLine="true"
+            android:text="交易机会"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <TextView
+            android:id="@+id/ad_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:minWidth="100dip"
+            android:paddingRight="0dp"
+            android:text=""
+            android:textColor="@color/btn_help_lable"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>-->
+
+    <WebView
+        android:id="@+id/webview1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

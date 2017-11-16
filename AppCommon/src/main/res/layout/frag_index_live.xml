@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_titlebar">
+
+        <include layout="@layout/main_frag_conmmon_title" />
+
+        <Button
+            android:id="@+id/btn_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="@string/lable_my_kefu"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="visible" />
+        <RelativeLayout
+            android:id="@+id/btn_help"
+            android:layout_width="60dip"
+            android:layout_height="44dip"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_service_icon"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:textColor="@color/tv_online_help"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.trade.eight.view.pulltorefresh.PullToRefreshExpandListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin_10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_20dp"
+        android:background="@color/white"/>
+</LinearLayout>

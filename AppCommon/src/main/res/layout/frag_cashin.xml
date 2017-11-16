@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:minHeight="800dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:minHeight="800dip">
+
+        <LinearLayout
+            android:id="@+id/line_bank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_90dp"
+
+            android:layout_marginLeft="@dimen/margin_11dp"
+            android:layout_marginRight="@dimen/margin_11dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@drawable/img_moneybord_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_20dp"
+            android:paddingLeft="@dimen/margin_20dp"
+            android:paddingRight="@dimen/margin_20dp"
+            android:paddingTop="@dimen/margin_20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_bankicon"
+                android:layout_width="@dimen/margin_44dp"
+                android:layout_height="@dimen/margin_44dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_44dp"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/text_bankname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/text_bankcard_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:textColor="@color/c_464646"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_trade_arrow" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:text="@string/lable_cashin_time"
+            android:textSize="@dimen/text_size_12sp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:textColor="@color/c_999999_80"
+            android:id="@+id/text_cashin_time"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                android:id="@+id/text_cashin_amount"
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:gravity="center|left"
+                android:text="@string/lable_cashin_amount"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/edit_cashin_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:hint="@string/lable_cashin_amount_hint"
+                        android:textColorHint="@color/c_999999_40"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <View
+                        android:layout_width="@dimen/margin_1dp"
+                        android:layout_height="@dimen/margin_21dp"
+                        android:background="@color/sub_bg" />
+
+                    <TextView
+                        android:id="@+id/text_cashin_querymoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/margin_16dp"
+                        android:text="@string/lable_cashin_querymoney"
+                        android:textColor="@color/c_BB8B7D"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/sub_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp">
+
+            <TextView
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:gravity="center|left"
+                android:text="@string/lable_cashin_moneypwd"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_cashin_moneypwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="@string/lable_cashin_moneypwd_hint"
+                    android:textColorHint="@color/c_999999_40"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:password="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/sub_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_cashin_bankpwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:gravity="center|left"
+                android:text="@string/lable_cashin_bankpwd"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_cashin_bankpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="@string/lable_cashin_bankpwd_hint"
+                    android:textColorHint="@color/c_999999_40"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:password="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/sub_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30dp"/>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_55dp"
+            android:layout_margin="@dimen/margin_16dp"
+            android:background="@drawable/bg_btn_qihuo_login"
+            android:text="@string/lable_cashin_confirm"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:text="@string/lable_cashin_tips"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/c_999999_80"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_4dp">
+
+            <TextView
+                android:id="@+id/text_qihuo_phonetips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服电话："
+                android:textColor="@color/c_999999_80"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/text_qihuo_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lable_my_kefu_phonenum"
+                android:textColor="@color/c_BB8B7D"
+                android:textSize="@dimen/text_size_12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_16dp"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="@dimen/margin_22dp"
+                android:layout_height="@dimen/margin_13dp"
+                android:src="@drawable/img_yinlian_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:gravity="center"
+                android:text="@string/lable_cashin_yinlian"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_13dp"
+                android:layout_height="@dimen/margin_13dp"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:src="@drawable/img_guofu_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:gravity="center"
+                android:text="@string/lable_cashin_appcompaney"
+                android:textColor="@color/c_464646"
+
+                android:textSize="@dimen/text_size_12sp" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_13dp"
+                android:layout_height="@dimen/margin_13dp"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:src="@drawable/img_appsmall_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:gravity="center"
+                android:text="@string/lable_cashin_appname"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_13dp"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:src="@drawable/img_zgzjh_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_16dp"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:gravity="center"
+                android:text="@string/lable_cashin_zhzjh"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_16dp"/>
+    </LinearLayout>
+</ScrollView>

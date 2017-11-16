@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="@bool/fitsSystemWindows">
+
+    <com.trade.eight.view.AppTitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.trade.eight.view.AppTitleView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_34dp"
+        android:text="国富期货"
+        android:textColor="@color/c_464646"
+        android:textSize="@dimen/text_size_15sp"
+        android:id="@+id/text_qihuo_companey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trade_qihuo_account"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_4dp"
+            android:id="@+id/text_qihuo_account"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_34dp"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <Button
+            android:id="@+id/btn_updatepwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_btn_cashin_qhmanage"
+            android:text="@string/trade_qihuo_updatepwd"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_updatepwd_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_btn_cashout_qhmanage"
+            android:text="@string/trade_qihuo_updatepwd_money"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_25dp"
+        android:layout_marginLeft="@dimen/margin_16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如忘记密码请联系国富期货大连分公司："
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/c_999999_70"
+            android:id="@+id/text_qihuo_phonetips"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/c_BB8B7D"
+            android:text="@string/lable_kefu_partcompany"
+            android:id="@+id/text_qihuo_phone"/>
+    </LinearLayout>
+
+</LinearLayout>

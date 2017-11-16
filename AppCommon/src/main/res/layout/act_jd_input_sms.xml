@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_layout_common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="充值金额"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/tv_cardinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dip"
+            android:layout_marginLeft="0dip"
+            android:layout_marginTop="12dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_lable"
+                android:textColor="@color/app_common_content"
+                android:textSize="32sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:paddingLeft="2dip"
+                android:text="100"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey_40"
+                android:textSize="32sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/grey_20" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dip"
+            android:layout_marginTop="12dip"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/jdpay_input_sms"
+            android:orientation="horizontal"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip">
+
+            <EditText
+                android:id="@+id/ed_sms"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:hint="@string/cash_jd_sms_hint"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey_40"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/tv_codetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15s后重发"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commitView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/trade_money_btn_cz"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="16dip"
+                android:layout_height="20dip"
+                android:src="@drawable/icon_jd_safe" />
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_marginLeft="4dip"
+                android:gravity="center"
+                android:text="立即支付"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="99dip"
+            android:layout_height="36dip"
+            android:layout_above="@+id/btn_submit"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dip"
+            android:src="@drawable/icon_jd_des" />
+    </LinearLayout>
+</LinearLayout>

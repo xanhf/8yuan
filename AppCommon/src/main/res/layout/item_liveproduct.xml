@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/c_999999"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingRight="@dimen/margin_10dp"
+        android:id="@+id/text_liveproduct_name"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:text="哈贵银"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:minWidth="@dimen/margin_80dp"
+        android:gravity="center|left">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/color_opt_eq"
+            android:id="@+id/text_liveproduct_price"
+            android:text="3979"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/color_opt_eq"
+            android:id="@+id/text_liveproduct_rate"
+            android:text="+10"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/margin_4dp"/>
+    </LinearLayout>
+</LinearLayout>

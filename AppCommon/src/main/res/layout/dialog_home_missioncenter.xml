@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_missioncenter_nav">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_24dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/white_round_solidtranspert"
+            android:gravity="center"
+            android:id="@+id/btn_cancle"
+            android:text="@string/iknow"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/white"
+            />
+        <View
+            android:layout_width="@dimen/margin_12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/bg_btn_home_missioncenter_nav"
+            android:textColor="@color/dialog_integral_confirm"
+            android:id="@+id/btn_commit"
+            android:text="@string/aq_go_missioncenter_1"
+            android:textSize="@dimen/text_size_15sp"/>
+    </LinearLayout>
+</RelativeLayout>

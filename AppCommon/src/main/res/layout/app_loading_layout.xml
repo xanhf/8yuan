@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_100dp"
+    android:layout_height="@dimen/margin_100dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@drawable/white_round_1dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/margin_36dp"
+        android:layout_height="@dimen/margin_8dp"
+        android:src="@drawable/app_loading"
+        android:id="@+id/img_appload"/>
+
+
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="112dip"-->
+    <!--android:layout_height="112dip"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/app_loading_shape"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+    <!--&lt;!&ndash;95%&ndash;&gt;-->
+    <!--<com.trade.eight.view.AppLoadingLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!---->
+   <!---->
+<!--</LinearLayout>-->

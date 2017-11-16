@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_common_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/app_layout_common_title" />
+
+            <LinearLayout
+                style="@style/item_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/backLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ectitle_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/mtab_indicator_selected"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    style="@style/item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_round"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lable_ecOrg_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="公布机构："
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ecOrg_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@color/calendar_detail_content"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <include layout="@layout/app_layout_common_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lable_ecNextTime_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下次公布："
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ecNextTime_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@color/calendar_detail_content"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <include layout="@layout/app_layout_common_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lable_ecMethod_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="统计法法："
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ecMethod_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@color/calendar_detail_content"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <include layout="@layout/app_layout_common_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lable_ecEffect_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="数据影响："
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ecEffect_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@color/calendar_detail_content"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <include layout="@layout/app_layout_common_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lable_ecFrequency_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="发布频率："
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/ecFrequency_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:textColor="@color/calendar_detail_content"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--style="@style/item_style"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dip"-->
+                <!--android:layout_marginTop="10dip"-->
+                <!--android:background="@drawable/white_round"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dip"-->
+                <!--android:layout_marginTop="10dip"-->
+                <!--android:background="@drawable/white_round"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="2dip"-->
+                <!--android:layout_height="14dip"-->
+                <!--android:background="@color/red" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dip"-->
+                <!--android:text="历史数据"-->
+                <!--android:textColor="@color/calendar_detail_lable"-->
+                <!--android:textSize="14sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--数据解释-->
+                <LinearLayout
+                    style="@style/item_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/white_round"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="2dip"
+                            android:layout_height="14dip"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="数据释义"
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ecMeaning_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <!--reason-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/white_round"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="2dip"
+                            android:layout_height="14dip"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="关注原因"
+                            android:textColor="@color/calendar_detail_lable"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/ecReason_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loadingView"
+        layout="@layout/app_common_progressbar" />
+</RelativeLayout>

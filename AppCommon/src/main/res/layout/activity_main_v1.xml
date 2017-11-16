@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="@bool/fitsSystemWindows">
+
+    <FrameLayout
+        android:id="@+id/frag_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/home_relativeLayout"
+        android:layout_marginBottom="-20dp"></FrameLayout>
+
+    <ImageView
+        android:id="@+id/btn_homecompetity"
+        android:layout_width="@dimen/margin_100dp"
+        android:layout_height="@dimen/margin_75dp"
+        android:layout_above="@id/home_relativeLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dip"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/smallView"
+        android:layout_width="50dip"
+        android:layout_height="58dip"
+        android:layout_above="@id/home_relativeLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dip"
+        android:layout_marginRight="10dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_user_index_ticket_small" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="领 券"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/homeHelpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/homeHelpView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="25dip"
+            android:background="@null"
+            android:padding="5dip"
+            android:text="跳过"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_tab"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent">
+
+        <!--android:background="@drawable/img_home_bottmbg" -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_222222"/>
+
+        <RadioGroup
+            android:id="@+id/home_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="63dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:paddingBottom="@dimen/margin_2dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tab_home"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawableTop="@drawable/main_tabindicator_home"
+                android:gravity="center"
+                android:text="@string/tab_main_home"
+                android:textColor="@color/bg_color_main_tab_indicator"
+                android:textSize="11sp"
+                />
+
+            <RadioButton
+                android:id="@+id/tab_quotations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_2dp"
+                android:drawableTop="@drawable/main_tabindicator_quotations"
+                android:gravity="center"
+                android:text="@string/tab_main_market"
+                android:textColor="@color/bg_color_main_tab_indicator"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/tab_weipan"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_2dp"
+                android:drawableTop="@drawable/main_tabindicator_weipan"
+                android:gravity="center"
+                android:text="@string/tab_main_weipan"
+                android:textColor="@color/bg_color_main_tab_indicator"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/tab_live"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_2dp"
+                android:drawableTop="@drawable/main_tabindicator_live"
+                android:gravity="center"
+                android:text="@string/tab_main_live"
+                android:textColor="@color/bg_color_main_tab_indicator"
+                android:textSize="11sp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/tab_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:button="@null"
+                android:drawablePadding="@dimen/margin_2dp"
+                android:drawableTop="@drawable/main_tabindicator_me"
+                android:gravity="center"
+                android:text="@string/tab_main_me"
+                android:textColor="@color/bg_color_main_tab_indicator"
+                android:textSize="11sp" />
+        </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

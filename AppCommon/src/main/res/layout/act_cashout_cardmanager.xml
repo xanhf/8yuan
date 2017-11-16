@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_464646"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <com.trade.eight.view.AppTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"></com.trade.eight.view.AppTitleView>
+
+
+    <com.trade.eight.view.pulltorefresh.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        android:visibility="visible"
+        android:layout_below="@+id/title_view"
+        android:layout_marginBottom="@dimen/margin_40dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:id="@+id/text_howadd_bank"
+        android:text="@string/lable_howadd_bank"
+        android:gravity="center"
+        android:textColor="@color/c_999999"
+        android:textSize="@dimen/text_size_12sp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

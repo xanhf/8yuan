@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_round">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:gravity="center"
+        android:textColor="@color/app_common_content"
+        android:textSize="@dimen/text_size_24sp"
+        android:text="@string/aq_complete_title"
+        android:lineSpacingExtra="@dimen/margin_4dp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_15sp"
+        android:text="@string/aq_complete_content"
+        android:lineSpacingExtra="@dimen/margin_4dp"/>
+    <ImageView
+        android:layout_width="@dimen/margin_176dp"
+        android:layout_height="@dimen/margin_88dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_28dp"
+        android:src="@drawable/img_aq_complete"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/btn_dialogcancle_grey"
+            android:gravity="center"
+            android:id="@+id/btn_cancle"
+            android:text="@string/aq_go_missioncenter"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/grey"
+            />
+        <View
+            android:layout_width="@dimen/margin_12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/login_bg_btn_ok"
+            android:textColor="@color/white"
+            android:id="@+id/btn_commit"
+            android:text="@string/aq_go_intergralmarket"
+            android:textSize="@dimen/text_size_15sp"/>
+    </LinearLayout>
+</LinearLayout>

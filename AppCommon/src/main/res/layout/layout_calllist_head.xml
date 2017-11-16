@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_btn_subbg_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_23dp"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/text_topcall_time"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_18dp"
+                android:textSize="@dimen/text_size_12sp"
+                android:textColor="@color/grey"/>
+
+            <LinearLayout
+                android:id="@+id/text_topcall_tag"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_18dp"
+                android:gravity="right"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_topcall_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:layout_marginLeft="@dimen/margin_23dp"
+            android:layout_marginRight="@dimen/margin_23dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:background="@color/white"></TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_12dp" />
+</LinearLayout>

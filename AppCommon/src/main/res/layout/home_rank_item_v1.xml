@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="28dip"
+        android:background="@color/sub_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:text="2016-05-05"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_homerank_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48dp"
+            android:background="@drawable/bg_common_listitem"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="6dip"
+            android:paddingRight="10dip">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_icon"
+                    android:layout_width="@dimen/margin_22dp"
+                    android:layout_height="@dimen/margin_24dp"
+                    android:background="@drawable/rank_dot_grey"
+                    android:gravity="center"
+                    android:paddingBottom="1dip"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="normal" />
+
+                <com.trade.eight.view.CircleImageView
+                    android:id="@+id/imgPerson"
+                    android:layout_width="@dimen/margin_28dp"
+                    android:layout_height="@dimen/margin_28dp"
+                    android:src="@drawable/liveroom_icon_person"
+                    android:layout_marginLeft="@dimen/margin_8dp"/>
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="盈利"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_profit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0%"
+                    android:textColor="@color/color_opt_gt"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="预计奖励"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_avatartips"/>
+
+
+                <TextView
+                    android:id="@+id/tv_mark"
+                    android:layout_width="@dimen/margin_49dp"
+                    android:layout_height="@dimen/margin_21dp"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/home_pic_ticket_grey"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="￥--"
+                    android:textColor="@color/color_opt_gt"
+                    android:textSize="@dimen/text_size_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_homerank_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_48dp"
+            android:background="@drawable/bg_common_listitem"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="10dip">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_icon_laterfouth"
+                    android:layout_width="@dimen/margin_24dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/sub_bg"
+                    android:gravity="center"
+                    android:paddingBottom="1dip"
+                    android:text="1"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="normal" />
+
+                <com.trade.eight.view.CircleImageView
+                    android:id="@+id/imgPerson_laterfouth"
+                    android:layout_width="@dimen/margin_28dp"
+                    android:layout_height="@dimen/margin_28dp"
+                    android:src="@drawable/liveroom_icon_person"
+                    android:layout_marginLeft="@dimen/margin_12dp"/>
+
+                <TextView
+                    android:id="@+id/tv_nickname_laterfouth"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="盈利"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_profit_laterfouth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0%"
+                    android:textColor="@color/color_opt_gt"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="预计奖励"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_avatartips_laterfouth"/>
+
+
+                <TextView
+                    android:id="@+id/tv_mark_laterfouth"
+                    android:layout_width="@dimen/margin_49dp"
+                    android:layout_height="@dimen/margin_21dp"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/home_pic_ticket_grey"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="￥--"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/liveroom_divider_h"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_24dp"
+            android:background="@drawable/app_common_list_divider" />
+    </RelativeLayout>
+</LinearLayout>

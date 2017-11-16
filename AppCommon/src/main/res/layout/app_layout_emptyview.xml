@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emptyView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="100dip"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/emptyImg"
+        android:layout_width="109dip"
+        android:layout_height="99dip"
+        android:src="@drawable/icon_empty_deferred" />
+
+    <TextView
+        android:id="@+id/emptyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:text="@string/empty_deferred"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_15sp" />
+</LinearLayout>
+

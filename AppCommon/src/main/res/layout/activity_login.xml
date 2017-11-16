@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <!--想在这里使用ScrollView 然后RegFrag LoginFrag 输入框将整个act的页面向上推
+    小米手机上测试可以，发现在酷派手机上不行，EdTextView会因为高度变化的时候 隐藏看不见
+     所以目前将ScrollView 放在各自的frag中去
+    -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="@bool/fitsSystemWindows"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_44dp"
+            android:paddingLeft="@dimen/margin_16dp"
+
+            android:gravity="center">
+            <!--<include layout="@layout/app_layout_requestfocuse" />-->
+            <ImageView
+                android:id="@+id/gobackView"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:clickable="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_closedlg_icon" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="@string/lable_register"
+                android:id="@+id/text_chang_login_reg"
+                android:textColor="@color/c_BB8B7D"
+                android:textSize="@dimen/text_size_17sp"
+                android:paddingRight="@dimen/margin_16dp"
+                android:paddingLeft="@dimen/margin_16dp"/>
+
+        </LinearLayout>
+
+        <com.trade.eight.view.user.LoginView
+            android:id="@+id/loginView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.trade.eight.view.user.RegView
+            android:id="@+id/regView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

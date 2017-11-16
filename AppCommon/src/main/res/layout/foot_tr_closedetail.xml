@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/c_E6E7EA_70"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/margin_16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="平仓价"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_closeprice"
+            android:textColor="@color/c_464646" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="平仓时间"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_closetime"
+            android:textColor="@color/c_464646" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="平仓类型"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_closetype"
+            android:textColor="@color/c_464646" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="平仓手续费"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_closesxf"
+            android:textColor="@color/c_464646" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/c_E6E7EA_70"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="报单编号"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:gravity="left"
+            android:id="@+id/text_ordersysid"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_40dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp">
+
+        <TextView
+            android:layout_width="@dimen/margin_80dp"
+            android:layout_height="wrap_content"
+            android:text="成交编号"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:id="@+id/text_tradeid"
+            android:gravity="left"
+            android:textColor="@color/c_999999_70"
+            android:textSize="@dimen/text_size_15sp" />
+    </LinearLayout>
+</LinearLayout>

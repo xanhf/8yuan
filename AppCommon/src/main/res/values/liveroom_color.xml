@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_3a80d2">#3a80d2</color>
+    <color name="color_469cff">#469cff</color>
+    <color name="color_f25f75">#f25f75</color>
+    <color name="color_161a1f">#161a1f</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_3f82cf">#3f82cf</color>
+    <color name="color_909090">#909090</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_25282f">#25282f</color>
+    <color name="color_dcdcda">#dcdcda</color>
+    <color name="color_liveroom_content">#343c48</color>
+    <color name="color_liveroom_time">#86919c</color>
+    <color name="color_liveroom_name">#469cff</color>
+    <color name="color_liveroom_bg">#e8e8e8</color>
+    <color name="color_liveroom_list_bg">#f2f2f2</color>
+    <color name="color_liveroom_red">#ed1b3a</color>
+</resources>

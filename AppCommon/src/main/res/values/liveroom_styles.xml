@@ -1,0 +1,15 @@
+<resources>
+
+
+    <style name="analysTheme" parent="AppBaseTheme">
+        <item name="android:screenOrientation">portrait</item>
+        <!--<item name="android:windowBackground">@android:color/black</item>-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <style name="analysThemeLand" parent="AppBaseTheme">
+        <item name="android:screenOrientation">landscape</item>
+        <!--<item name="android:windowBackground">@android:color/black</item>-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

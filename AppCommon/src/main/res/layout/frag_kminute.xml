@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.trade.eight.kchart.chart.minute.KMinuteView
+        android:id="@+id/minuteView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <com.trade.eight.kchart.chart.cross.KCrossLineView
+        android:id="@+id/crossLineView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+
+    <include
+        android:id="@+id/layoutLoding"
+        layout="@layout/app_common_progressbar" />
+</RelativeLayout>

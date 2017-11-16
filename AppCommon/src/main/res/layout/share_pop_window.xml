@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:paddingBottom="20dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="0dip"
+    android:paddingTop="10dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/share_window_title"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dip"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+        <!--android:layout_width="12dip"-->
+        <!--android:layout_height="12dip"-->
+        <!--android:background="@drawable/share_step_circle"-->
+        <!--android:gravity="center"-->
+        <!--android:text="1"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="10sp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:gravity="center"
+            android:text="@string/share_window_step_lable_01"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/share_window_step_text_01"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:orientation="horizontal">
+        <!--<TextView-->
+        <!--android:layout_width="12dip"-->
+        <!--android:layout_height="12dip"-->
+        <!--android:background="@drawable/share_step_circle"-->
+        <!--android:gravity="center"-->
+        <!--android:text="2"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="10sp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:gravity="center"
+            android:text="@string/share_window_step_lable_02"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/share_window_step_text_02"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+        <!--android:layout_width="12dip"-->
+        <!--android:layout_height="12dip"-->
+        <!--android:background="@drawable/share_step_circle"-->
+        <!--android:gravity="center"-->
+        <!--android:text="3"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="10sp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:gravity="center"
+            android:text="@string/share_window_step_lable_03"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:gravity="left|center_vertical"
+            android:text="@string/share_window_step_text_03"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

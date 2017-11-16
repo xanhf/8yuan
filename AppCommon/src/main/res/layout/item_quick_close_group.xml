@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/p02View"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="12dip"
+        android:background="@color/trade_item_temp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@color/white">
+
+        <com.trade.eight.view.UnderLineTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:background="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="美国原油"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold"
+            app:isLineEnable="false"
+            app:lineColor="@color/white"
+            app:mlineHeight="3dip"
+            app:mlineWidth="10dip"
+            app:upOrunder="under"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_checkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"
+            android:text="全选"
+            android:textColor="@color/app_common_selected"
+            android:textSize="@dimen/text_size_15sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/app_layout_common_line" />
+
+</LinearLayout>

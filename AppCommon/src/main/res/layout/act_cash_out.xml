@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/app_layout_common_title" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/white"
+            android:paddingRight="@dimen/margin_16dp"
+            android:text="@string/trade_order_mangaecard"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/text_cardmanager"/>
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/line_cashout_card"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_50dp"
+                android:layout_weight="1.0"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_bankicon"
+                    android:layout_width="@dimen/margin_24dp"
+                    android:layout_height="@dimen/margin_24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:src="@drawable/loading_large_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_50dp"
+                    android:layout_marginLeft="@dimen/margin_16dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_bankname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_8dp"
+                        android:textColor="@color/app_common_content"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_8dp"
+                            android:text="@string/trade_order_cardnum4"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                        <TextView
+                            android:id="@+id/text_bankcard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_8dp"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_addcard"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_50dp"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:text="添加银行卡"
+                android:textColor="@color/sub_blue"
+                android:visibility="visible" />
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <include layout="@layout/app_layout_common_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提取金额"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:text="(可提取"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/text_cancashout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/color_opt_gt"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美元)"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_lable"
+                android:textColor="@color/app_common_content"
+                android:textSize="32sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/ed_inputMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:background="@null"
+                android:hint="@string/cash_out_input_money"
+                android:inputType="numberDecimal"
+                android:paddingLeft="2dip"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey_40"
+                android:textSize="17sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <include layout="@layout/app_layout_common_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_40dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_14sp"
+            android:id="@+id/text_cashout_tips"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_16dp"
+        android:paddingTop="@dimen/margin_60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当月前"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/color_opt_gt"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="笔免手续费,超出后每笔收取20美元手续费"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:background="@drawable/trade_money_btn_cz"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/text_size_15sp"
+        android:visibility="visible" />
+
+</LinearLayout>

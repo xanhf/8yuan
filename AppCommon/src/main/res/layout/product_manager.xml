@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="@bool/fitsSystemWindows">
+
+    <!--<include-->
+        <!--android:id="@+id/title_bar"-->
+        <!--layout="@layout/app_layout_common_title" />-->
+    <com.trade.eight.view.AppTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar">
+
+    </com.trade.eight.view.AppTitleView>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar">
+
+        <LinearLayout
+            android:id="@+id/subscribe_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="14.0dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_16dp">
+                <TextView
+                    android:id="@+id/my_category_tip_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dip"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/margin_16dp"
+                    android:text="我的自选"
+                    android:textColor="@color/c_464646"
+                    android:textSize="@dimen/text_size_20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dip"
+                    android:text="(单击删除，长按拖拽排序)"
+                    android:gravity="left|center_vertical"
+
+                    android:textColor="@color/c_999999"
+                    android:textSize="@dimen/text_size_15sp"/>
+            </LinearLayout>
+
+
+
+            <com.trade.eight.view.DragGrid
+                android:id="@+id/userGridView"
+                style="@style/item_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="14dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="14.0dip" />
+
+            <TextView
+                android:id="@+id/more_category_text"
+                android:layout_width="fill_parent"
+                android:layout_height="36dip"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:text="点击添加品种"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:paddingLeft="6dip" />
+            <!--<TextView android:id="@+id/lineView"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="1dip"-->
+            <!--android:background="@color/product_manager_lable"-->
+            <!--/>-->
+            <include layout="@layout/app_layout_common_line" />
+
+            <com.trade.eight.view.OtherGridView
+                android:id="@+id/otherGridView"
+                style="@style/item_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="14dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="14.0dip" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

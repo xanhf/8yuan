@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleHit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dip"
+        android:layout_marginTop="30dip"
+        android:gravity="center"
+        android:padding="15dip"
+        android:text="请登录后再操作"
+        android:textColor="@color/app_common_content"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/c_E6E7EA_70"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_login_cancle"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/c_999999"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="visible" />
+        <View
+            android:layout_width="@dimen/margin_0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/c_E6E7EA_70"/>
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_login_submit"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/c_BB8B7D"
+            android:textSize="@dimen/text_size_15sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_16dp"
+    android:id="@+id/line_root">
+
+    <RelativeLayout
+        android:layout_width="@dimen/margin_68dp"
+        android:layout_height="@dimen/margin_68dp"
+        android:background="@drawable/bg_btn_bb8b7d"
+        android:id="@+id/rel_homelive_bg">
+
+        <com.trade.eight.view.CircleImageView
+            android:id="@+id/img_homelive_avater"
+            android:layout_width="@dimen/margin_60dp"
+            android:layout_height="@dimen/margin_60dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android_custom:circle_style="round"
+            android_custom:roundradius="8dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="@dimen/margin_68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:gravity="center"
+        android:id="@+id/text_homelive_name"
+        android:text="@string/tab_main_live"
+        android:textColor="@color/c_464646"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:layout_width="@dimen/margin_68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:gravity="center"
+        android:text="0人观看"
+        android:id="@+id/text_homelive_onlinenum"
+        android:textColor="@color/c_464646"
+        android:textSize="@dimen/text_size_12sp" />
+</LinearLayout>

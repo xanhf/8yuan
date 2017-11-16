@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_common_list_divider"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="8dip"
+        android:background="@drawable/app_common_list_divider"/>
+
+    <LinearLayout
+        android:id="@+id/line_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip">
+
+        <TextView
+            android:id="@+id/text_productname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:gravity="center|left"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_typeBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:maxWidth="60dip"
+            android:singleLine="true"
+            android:textColor="@color/trade_up"
+            android:textSize="@dimen/hold_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/trade_up"
+            android:textSize="@dimen/hold_title"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/hold_title"
+            android:textStyle="normal"
+            android:layout_weight="1.0"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/margin_16dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

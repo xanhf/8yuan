@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_464646"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dip" />
+
+    <LinearLayout
+        android:id="@+id/line_bank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_90dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@drawable/white_round_1dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_20dp"
+        android:paddingLeft="@dimen/margin_20dp"
+        android:paddingRight="@dimen/margin_20dp"
+        android:paddingTop="@dimen/margin_20dp">
+
+        <ImageView
+            android:id="@+id/img_bankicon"
+            android:layout_width="@dimen/margin_44dp"
+            android:layout_height="@dimen/margin_44dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_44dp"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/text_bankname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:text="----"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/text_bankcard_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:text="----"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

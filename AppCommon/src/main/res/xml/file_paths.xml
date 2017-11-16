@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<external-path path="Android/data/app的包名/" name="files_root" />-->
+
+    <!--内部的element可以是files-path，-->
+    <!--cache-path，external-path，external-files-path，external-cache-path，-->
+    <!--分别对应Context.getFilesDir()，Context.getCacheDir()，-->
+    <!--Environment.getExternalStorageDirectory()，-->
+    <!--Context.getExternalFilesDir()，-->
+    <!--Context.getExternalCacheDir()等几个方法。-->
+    <!--后来翻看源码发现还有一个没有写进文档的，但是也可以使用的element，-->
+    <!--是root-path，直接对应文件系统根目录。-->
+    <!--不过既然没有写进文档中，其实还是有将来移除的可能的-->
+    <!--<external-path-->
+    <!--name="files_root"-->
+    <!--path="Android/data/com.gaoxun.pandainv/" />-->
+    <!--<external-path-->
+    <!--name="external_storage_root"-->
+    <!--path="." />-->
+    <!--<files-path-->
+    <!--name="my_images"-->
+    <!--path="images/" />-->
+
+
+    <external-cache-path
+        name="cache-path"
+        path="Android/data/com.eight.qihuo/"></external-cache-path>
+
+    <!--<external-cache-path-->
+    <!--name="external-cache-path"-->
+    <!--path="my_app_sss/"></external-cache-path>-->
+
+    <root-path
+        name="root_path"
+        path="." />
+
+</paths>

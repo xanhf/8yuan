@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_layout_common_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="30dip">
+
+                <ImageView
+                    android:id="@+id/img_appIcon"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:src="@drawable/img_aboutus_icon_logo" />
+
+                <TextView
+                    android:id="@+id/tv_appName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_appVersion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:textColor="@color/c_999999_80"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_aboutus"
+                style="@style/AboutusItemStyle">
+
+                <TextView
+                    style="@style/AboutusItemTextStyle"
+                    android:layout_weight="1"
+                    android:text="关于指盈金服" />
+
+                <ImageView style="@style/SettingItemIconMoreStyle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/liveroom_divider_h"
+                android:background="@drawable/app_common_list_divider"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_law"
+                style="@style/AboutusItemStyle">
+
+                <TextView
+                    style="@style/AboutusItemTextStyle"
+                    android:layout_weight="1"
+                    android:text="风险提示" />
+
+                <ImageView style="@style/SettingItemIconMoreStyle" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/liveroom_divider_h"
+                android:background="@drawable/app_common_list_divider"
+                android:layout_marginLeft="@dimen/margin_16dp"
+                android:layout_marginRight="@dimen/margin_16dp"/>
+            <!--<View-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="@dimen/liveroom_divider_h"-->
+            <!--android:background="@drawable/app_common_list_divider" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_job"-->
+            <!--style="@style/AboutusItemStyle">-->
+
+            <!--<TextView-->
+            <!--style="@style/AboutusItemTextStyle"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="招贤纳士" />-->
+
+            <!--<ImageView style="@style/SettingItemIconMoreStyle" />-->
+            <!--</LinearLayout>-->
+            <!--<View-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="@dimen/liveroom_divider_h"-->
+            <!--android:background="@drawable/app_common_list_divider" />-->
+
+            <!--<View-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="@dimen/liveroom_divider_h"-->
+            <!--android:layout_marginTop="40dip"-->
+            <!--android:background="@drawable/app_common_list_divider"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

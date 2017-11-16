@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_layout_common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--必须再套一层 使用背景才不会拉升-->
+            <LinearLayout
+                android:id="@+id/contentLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shareact_min_h"
+                android:background="@drawable/img_share_bg"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="335" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="80"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="1dip"
+                        android:layout_weight="5" />
+
+                    <Button
+                        android:id="@+id/btn_share"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:onClick="myClick"
+                        android:paddingLeft="40dip"
+                        android:paddingRight="40dip"
+                        android:textColor="@color/btn_share_text"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="1dip"
+                        android:layout_weight="5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginTop="2dip"
+                    android:layout_weight="265"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/share_pop_window" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

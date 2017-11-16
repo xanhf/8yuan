@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_live_room_bg"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.trade.eight.view.AppTitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleview_title"></com.trade.eight.view.AppTitleView>
+
+        <RelativeLayout
+            android:id="@+id/videLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            android:background="@android:color/black">
+
+            <com.pili.pldroid.player.widget.PLVideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <!--控制拦-->
+            <RelativeLayout
+                android:id="@+id/controlRootLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+                <com.trade.eight.view.AppTitleView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titleview_control"></com.trade.eight.view.AppTitleView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/buffering_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include layout="@layout/app_common_progressbar" />
+            </LinearLayout>
+
+            <include layout="@layout/video_empty_layout" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contentView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.8"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_product"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:background="@color/black"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg_color"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/p_01"
+                    android:layout_width="0dip"
+                    android:layout_height="24dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_title01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="哈贵油"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rate01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/p_02"
+                    android:layout_width="0dip"
+                    android:layout_height="24dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_title02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="哈贵油"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rate02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/p_03"
+                    android:layout_width="0dip"
+                    android:layout_height="24dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_title03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rate03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/color_opt_gt"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/tab01"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.trade.eight.view.UnderLineTextView
+                            android:id="@+id/tv_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:text="@string/tab_video"
+                            android:textColor="@color/color_video_title"
+                            android:textSize="@dimen/text_size_15sp"
+                            app:isLineEnable="false"
+                            app:isLineEnableWhileSelected="false"
+                            app:lineColor="@color/c_464646"
+                            app:mlineHeight="3dip"
+                            app:mlineWidth="48dip"
+                            app:upOrunder="under" />
+
+                        <LinearLayout
+                            android:id="@+id/onlineCountView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dip"
+                                android:text="("
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_12sp" />
+
+                            <ImageView
+                                android:id="@+id/ic_online"
+                                android:layout_width="9dip"
+                                android:layout_height="10dip"
+                                android:layout_marginLeft="2dip"
+                                android:layout_marginRight="2dip"
+                                android:src="@drawable/ic_online_count" />
+
+                            <TextView
+                                android:id="@+id/tv_onlineCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dip"
+                                android:text=""
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dip"
+                                android:text=")"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="48dip"
+                        android:layout_height="3dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/img_cursor_bg"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab02"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.trade.eight.view.UnderLineTextView
+                            android:id="@+id/tv_advice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/tab_advice"
+                            android:textColor="@color/color_video_title"
+                            android:textSize="@dimen/text_size_15sp"
+                            app:isLineEnable="false"
+                            app:isLineEnableWhileSelected="false"
+                            app:lineColor="@color/c_464646"
+                            app:mlineHeight="3dip"
+                            app:mlineWidth="48dip"
+                            app:upOrunder="under" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="48dip"
+                        android:layout_height="3dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/img_cursor_bg"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab03"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.trade.eight.view.UnderLineTextView
+                            android:id="@+id/tv_fxs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/tab_fxs"
+                            android:textColor="@color/color_video_title"
+                            android:textSize="@dimen/text_size_15sp"
+                            app:isLineEnable="false"
+                            app:isLineEnableWhileSelected="false"
+                            app:lineColor="@color/c_464646"
+                            app:mlineHeight="3dip"
+                            app:mlineWidth="48dip"
+                            app:upOrunder="under" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="48dip"
+                        android:layout_height="3dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/img_cursor_bg"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/chat_room_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/quickView"
+                    android:layout_width="70dip"
+                    android:layout_height="@dimen/margin_150dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:minWidth="@dimen/margin_70dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_livetrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin_51dp"
+                        android:background="@drawable/bg_btn_live_trade"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_4dp"
+                        android:paddingTop="@dimen/margin_4dp"
+                        android:text="建仓"
+                        android:textColor="@color/c_464646"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/line_liveclose"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_48dp"
+                        android:background="@drawable/bg_btn_live_close"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/margin_4dp"
+                        android:text="平仓"
+                        android:textColor="@color/c_464646"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_gomarket"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_51dp"
+                        android:background="@drawable/bg_btn_live_market"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/margin_4dp"
+                        android:paddingLeft="@dimen/margin_4dp"
+                        android:text="行情"
+                        android:textColor="@color/c_464646"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_chatroom_notice" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

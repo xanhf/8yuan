@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:gravity="center"
+        android:textColor="@color/app_common_content"
+        android:textSize="@dimen/text_size_15sp" />
+    <TextView
+        android:id="@+id/tv_msg_secondline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <include layout="@layout/app_layout_common_line" />
+
+    <Button
+        android:id="@+id/btnPos"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_bottom_round"
+        android:text="确 定"
+        android:textColor="#4877e6"
+        android:textSize="16sp" />
+</LinearLayout>

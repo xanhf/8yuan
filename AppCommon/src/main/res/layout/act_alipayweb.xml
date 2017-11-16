@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_app_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/heand_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@drawable/bg_nav_bar"
+        android:orientation="horizontal">
+
+        <include layout="@layout/app_layout_backview" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="40dip"
+            android:paddingRight="40dip"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--app 的导航栏背景-->
+    <!--<item android:drawable="@drawable/img_nav_bar"/>-->
+    <!--<item android:drawable="@color/sys_nav_bar_color"/>-->
+    <item android:drawable="@color/home_title_bg_color"/>
+</selector>

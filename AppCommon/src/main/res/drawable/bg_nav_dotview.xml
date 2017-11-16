@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:drawable="@drawable/nav_dot_select">
+        <!--<shape android:shape="oval">-->
+            <!--&lt;!&ndash;<stroke android:width="2.0dip" android:color="@color/nav_dotview_selected"/>&ndash;&gt;-->
+            <!--<solid android:color="@color/nav_dotview_selected" />-->
+        <!--</shape>-->
+    </item>
+
+    <item android:drawable="@drawable/nav_dot_normal">
+        <!--<shape android:shape="oval">-->
+            <!--<solid android:color="@color/grey" />-->
+        <!--</shape>-->
+    </item>
+</selector>

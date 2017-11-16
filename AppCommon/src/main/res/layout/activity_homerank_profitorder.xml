@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/backLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@drawable/bg_nav_bar"
+        android:visibility="visible">
+
+        <include layout="@layout/app_layout_backview" />
+
+        <TextView style="@style/common_title_text" />
+
+
+    </RelativeLayout>
+
+
+
+        <com.trade.eight.view.pulltorefresh.PullToRefreshListView
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:layout_below="@id/backLayout"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true"
+            android:visibility="gone"/>
+
+    <include layout="@layout/app_layout_emptyview"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+    <!--<LinearLayout
+        android:id="@+id/line_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_homerran_noprofitorder" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:gravity="center"
+            android:text="暂无可晒盈利单"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>-->
+
+
+</RelativeLayout>

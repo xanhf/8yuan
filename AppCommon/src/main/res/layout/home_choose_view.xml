@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/head_choose_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="0dip"
+        android:orientation="horizontal">
+
+        <com.trade.eight.view.UnderLineTextView
+            android:id="@+id/product_tab_news"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_tab_news"
+            android:textColor="@color/home_choose_view_text_bg"
+            android:textSize="@dimen/text_size_15sp"
+            app:isLineEnable="true"
+            app:lineColor="@color/under_line"
+            app:mlineHeight="3dip"
+            app:mlineWidth="10dip"
+            app:upOrunder="under" />
+
+
+        <com.trade.eight.view.UnderLineTextView
+            android:id="@+id/product_tab_calendar"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_tab_calendar"
+            android:textColor="@color/home_choose_view_text_bg"
+            android:textSize="@dimen/text_size_15sp"
+            app:isLineEnable="false"
+            app:lineColor="@color/under_line"
+            app:mlineHeight="3dip"
+            app:mlineWidth="10dip"
+            app:upOrunder="under" />
+
+
+        <com.trade.eight.view.UnderLineTextView
+            android:id="@+id/product_tab_rank"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_tab_rank"
+            android:textColor="@color/home_choose_view_text_bg"
+            android:textSize="@dimen/text_size_15sp"
+            app:isLineEnable="false"
+            app:lineColor="@color/under_line"
+            app:mlineHeight="3dip"
+            app:mlineWidth="10dip"
+            app:upOrunder="under" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/app_layout_common_line" />
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topPagerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_16dp">
+
+        <com.trade.eight.view.AutoScrollViewPager
+            android:id="@+id/autoViewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="140dip"
+             />
+
+        <LinearLayout
+            android:id="@+id/dotlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/autoViewPager"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_21dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/text_size_20">
+
+        <LinearLayout
+            android:id="@+id/rl_home_newuser_classroom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:layout_weight="1.0"
+            android:gravity="center|left">
+
+            <ImageView
+                android:id="@+id/img_homerank_second_head"
+                android:layout_width="@dimen/margin_28dp"
+                android:layout_height="@dimen/margin_21dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home_icon_school" />
+
+            <TextView
+                android:id="@+id/tv_home_userstudy"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_21dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_toRightOf="@+id/img_userstudy_icon"
+                android:gravity="center"
+                android:text="@string/home_userstudy"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rl_home_newuser_gold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_weight="1.0"
+            android:gravity="center|left">
+
+            <ImageView
+                android:layout_width="@dimen/margin_28dp"
+                android:layout_height="@dimen/margin_21dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home_icon_open" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_21dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_toRightOf="@+id/img_userstudy_icon"
+                android:gravity="center"
+                android:text="@string/home_openaccount"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.trade.eight.view.AutoScrollViewPager
+            android:id="@+id/product_viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/margin_100dp" />
+
+        <LinearLayout
+            android:id="@+id/dotlayout_product"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_viewpager"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dip"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70" />
+
+    <LinearLayout
+        android:id="@+id/line_homelive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/line_golive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/margin_68dp"
+                android:layout_height="@dimen/margin_68dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_btn_bb8b7d_bb8b7d">
+                <ImageView
+                    android:layout_width="@dimen/margin_17dp"
+                    android:layout_height="@dimen/margin_17dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_homelive_icon" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="@dimen/margin_68dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:gravity="center"
+                android:text="@string/tab_main_live"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_homelive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/sub_bg" />
+
+    <RelativeLayout
+        android:id="@+id/home_tab_tradechance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dip"
+        android:paddingRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_25dp">
+
+        <TextView
+            android:id="@+id/tv_tradechance_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dip"
+            android:text="@string/home_tradechance"
+            android:textColor="@color/c_464646"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_tradechance_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_toRightOf="@+id/tv_tradechance_tips"
+            android:textColor="@color/c_999999"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tradechance_icon"
+            android:layout_width="5dip"
+            android:layout_height="10dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dip"
+            android:background="@drawable/home_icon_more"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--<include layout="@layout/home_choose_view" />-->
+</LinearLayout>

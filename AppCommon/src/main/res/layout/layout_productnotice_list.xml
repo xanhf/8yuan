@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_48dp"
+        android:background="@color/sub_bg"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/text_pn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="编辑"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"/>
+
+        <TextView
+            android:id="@+id/text_pn_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="我的提醒"
+            android:textStyle="bold"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <TextView
+            android:id="@+id/text_pn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="关闭"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:paddingRight="@dimen/margin_16dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0">
+        <!--<ListView-->
+            <!--android:id="@+id/list_pn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"></ListView>-->
+
+        <com.trade.eight.view.swpilistview.SwipeListView
+            android:id="@+id/list_pn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            android:id="@+id/line_pn_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_notice_emtpy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:text="@string/product_notice_empty"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_add_pn"
+        android:layout_width="@dimen/margin_160dp"
+        android:layout_height="@dimen/margin_36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_40dp"
+        android:background="@drawable/bg_btn_blue"
+        android:text="+  添加提醒"
+        android:textColor="@color/sub_blue"
+        android:textSize="@dimen/text_size_15sp" />
+</LinearLayout>

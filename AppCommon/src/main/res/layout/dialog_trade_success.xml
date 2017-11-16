@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="28dip">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_dialog_success" />
+
+    <TextView
+        android:id="@+id/titleHit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="16dip"
+        android:paddingTop="12dip"
+        android:text="下单成功"
+        android:textColor="@color/app_common_content"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_login_cancle"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_login_submit"
+            android:gravity="center"
+            android:text="查看持仓"
+            android:textColor="@color/common_blue"
+            android:textSize="@dimen/text_size_15sp" />
+    </LinearLayout>
+
+</LinearLayout>

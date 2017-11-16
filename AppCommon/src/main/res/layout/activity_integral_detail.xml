@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/backLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@drawable/bg_nav_bar"
+        android:visibility="visible">
+
+        <include layout="@layout/app_layout_backview" />
+
+        <TextView style="@style/common_title_text" />
+
+        <Button
+            android:id="@+id/btn_homerank_tips"
+            android:layout_width="@dimen/margin_20dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/img_homerank_tipsicon"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/btn_help_lable"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_query"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_below="@+id/backLayout">
+
+        <LinearLayout
+            android:id="@+id/line_query_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_exhistory_timelable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textColor="@color/home_title_bg_color"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView
+                android:id="@+id/img_exhistory_timelable"
+                android:layout_width="@dimen/margin_11dp"
+                android:layout_height="@dimen/margin_7dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_8dp"
+                android:src="@drawable/img_exhistory_timeclose" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/margin_0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sub_bg" />
+
+        <LinearLayout
+            android:id="@+id/line_query_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_below="@+id/backLayout"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text_exhistory_typelable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textColor="@color/home_title_bg_color"
+                android:textSize="@dimen/text_size_15sp"
+                android:text="全部"/>
+
+            <ImageView
+                android:id="@+id/img_exhistory_typelable"
+                android:layout_width="@dimen/margin_11dp"
+                android:layout_height="@dimen/margin_7dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_8dp"
+                android:src="@drawable/img_exhistory_timeclose" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_devider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_8dp"
+        android:layout_below="@+id/line_query"
+        android:background="@color/sub_bg" />
+
+    <com.trade.eight.view.pulltorefresh.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/view_devider"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+    <include
+        layout="@layout/app_layout_emptyview"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</RelativeLayout>

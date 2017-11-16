@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="184dip"
+        android:background="@color/app_common_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/trade_up"
+            android:text="+10元"
+            android:textSize="@dimen/text_size_12sp"
+            android:id="@+id/tv_animaion"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_redpacket_icon"
+            android:layout_marginTop="17dip"
+            android:layout_marginBottom="31dip"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="红包余额(元)"
+                android:textColor="@color/white_70percent"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="27sp"
+                android:id="@+id/tv_redpacket_currenttotal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="累计总额(元)"
+                android:textColor="@color/white_70percent"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="728.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15sp"
+                android:id="@+id/tv_redpacket_total"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="8dip"
+            android:gravity="center"
+            android:text="有效期至:234567890"
+            android:textColor="@color/grey"
+            android:id="@+id/tv_redpacket_ValidDate"
+            android:textSize="@dimen/text_size_12sp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:textSize="@dimen/text_size_17sp"
+        android:textColor="@color/grey"
+        android:text="红包明细"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp"
+        android:gravity="center|left"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grey"/>
+</LinearLayout>

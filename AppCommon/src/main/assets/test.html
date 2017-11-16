@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+	var caopan8=new Object();
+	caopan8.action=function(trade){
+	//最终还是href调用的，所以只需要拦截url是caopan8://开头的
+		window.location.href="caopan8://"+trade;
+	}
+
+
+    </script>
+</head>
+<body>
+<a id="gotoHtml" href="javascript:void(0);" onclick="caopan8.action('liveList');">
+    <img alt="" src="file:///android_asset/app_icon.png">
+</a>
+
+</body>
+</html>

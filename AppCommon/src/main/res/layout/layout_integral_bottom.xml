@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_30dp"
+        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/grey"
+        android:gravity="center"
+        android:text="更多实物兑换正在陆续添加中，敬请关注！"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/sub_bg"
+        android:id="@+id/view_top"/>
+</LinearLayout>

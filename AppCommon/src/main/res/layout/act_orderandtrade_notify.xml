@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--trade_item_temp-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_14dp"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_38dp"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/margin_16dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_notify"
+            android:layout_width="@dimen/margin_36dp"
+            android:layout_height="@dimen/margin_36dp"
+            android:src="@drawable/img_ordernotify_fail" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_notify_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/text_notify_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/text_size_15sp"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_14dp"
+        android:background="@color/white"/>
+<!---->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_10dp"
+        android:background="@drawable/img_spilt_gradient"/>
+
+</LinearLayout>

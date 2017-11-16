@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="33dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gift_show_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dip"
+            android:paddingRight="0dip">
+
+            <ImageView
+                android:id="@+id/img_level"
+                android:layout_width="18dip"
+                android:layout_height="12dip"
+                android:src="@drawable/live_level_v1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/giftpan_show_nick"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:singleLine="true"
+                android:text="送"
+                android:textColor="@color/giftpan_show_nick"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView
+                android:id="@+id/tempView"
+                android:layout_width="70dip"
+                android:layout_height="70dip" />
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="2dip"-->
+            <!--android:ellipsize="end"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="x"-->
+            <!--android:textColor="@color/giftpan_show_nick"-->
+            <!--android:textSize="@dimen/text_size_17sp"-->
+            <!--android:textStyle="italic" />-->
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="40dip"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="x1"
+                android:textColor="@color/giftpan_number"
+                android:textSize="@dimen/text_size_17sp"
+                android:textStyle="italic|bold" />
+        </LinearLayout>
+
+
+        <!--占位置显示礼物。礼物是突出显示的-->
+        <LinearLayout
+            android:id="@+id/tempV"
+            android:layout_width="wrap_content"
+            android:layout_height="33dip"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dip"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_templevel"
+                android:layout_width="18dip"
+                android:layout_height="12dip"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_tempnickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/giftpan_show_nick"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:singleLine="true"
+                android:text="送"
+                android:textColor="@color/giftpan_show_nick"
+                android:textSize="@dimen/text_size_15sp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_gift"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_marginBottom="10dip"
+            android:layout_toRightOf="@+id/tempV"
+            android:src="@drawable/live_gift_applause" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_number"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="2dip"-->
+        <!--android:ellipsize="end"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="x1"-->
+        <!--android:textColor="@color/giftpan_show_nick"-->
+        <!--android:textSize="@dimen/text_size_40sp"-->
+        <!--android:textStyle="italic" />-->
+    </RelativeLayout>
+</LinearLayout>

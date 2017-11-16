@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.easylife.ten.lib"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--<uses-permission android:name="android.permission.SEND_SMS"/>-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!--<uses-permission android:name="android.permission.CALL_PHONE"/>-->
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>-->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+
+    <!--just for samsung market-->
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.eight.qihuo.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.eight.qihuo.permission.RECEIVE_MSG" />
+
+
+    <!--push getui sdk start -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}"/>
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal"/>
+    <!--push getui sdk end -->
+
+    <!--悬浮窗口权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!--更换logo的，个推的push.png的logo页需要换-->
+    <application
+        android:name="com.trade.eight.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_nam_main"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.LoadingActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/welcomeStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.DELETE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="futures" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginRegTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--注册成功-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.RegSuccessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--android:theme="@style/LoginRegTheme"-->
+        <activity
+            android:name="com.trade.eight.moudle.outterapp.QiHuoExplainWordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/dialog_forqihuoexplain"/>
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.ResetPwdIndexAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.NaviActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/welcomeStyle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<action android:name="android.intent.action.DELETE"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeRankActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeRankProfitOrderActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!--新版注册页面-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.RedirectH5Act"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!--fxbtg充值-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.FXBTGCashInH5Act"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.WeiXinRechargeAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.AboutUsActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+        <activity
+            android:name="com.trade.eight.moudle.outterapp.ImageViewAttachActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitleBarFullscreen" />
+
+        <activity
+            android:name="com.trade.eight.moudle.outterapp.StrategyDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.outterapp.WebActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.LawActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/analysTheme"
+
+            >
+
+        </activity>
+
+        <activity
+            android:name="com.trade.eight.moudle.product.activity.ProductManagerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/analysTheme" />
+        <activity
+            android:name="com.trade.eight.moudle.product.activity.ProductActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeNewsDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeCalendarDetailAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.WeipanMsgListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.trade.eight.moudle.receiver.AlarmReceiver" />
+        <!--全局网络监听-->
+        <receiver android:name="com.trade.eight.moudle.receiver.AppNetReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--平仓详情-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeCloseDetailAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--提现-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.CashOutAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.cashinout.CashOutCardManageAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.cashinout.CashOutBindCardAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.cashinout.CashDetailAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.BankBranchAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--充值-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.CashInAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--token验证-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.AuthTokenAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeVoucherAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeRedPacketAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeDeferredAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.VoucherRuleAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.ProvinceAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.CityAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.BankListAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.StepNavAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.StepNavMuiltAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+        <activity
+            android:name="com.trade.eight.moudle.ads.FullAdsAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" />
+
+        <activity
+            android:name="com.trade.eight.moudle.chatroom.activity.ChatRoomActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarFullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.UserSettingAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.UserInfoEditAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--分享 相关act  start-->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.trade.eight.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.trade.eight.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.ShareAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--分享 相关act  end-->
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeRankDetailAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.trade.eight.moudle.home.activity.HomeRankDetailV1Act"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeLoginAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeUnifyPWDLoginAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeRegAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeUnifyPwdFirstStepAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeUnifyPwdSecondAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeRestPwdAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeUnifyPwdResetAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeUnifyPwdResetExchangeAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--积分商城-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.IntegralMarketActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--礼物详情页-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.GoodsActDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--礼物详情页 兑换历史-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.GoodsActDetailHistoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--任务中心-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.MissionCenterAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--答题中心-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.AnswerQuestionAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.IntegralExchangeHistoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.IntegralDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--android:theme=""-->
+        <activity
+            android:name="com.trade.eight.moudle.product.activity.ProductNoticeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog_foractivity_noani"/>
+        <!--行情提醒-->
+        <activity
+            android:name="com.trade.eight.moudle.push.activity.ProductNoticeNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/dialog_foractivity"/>
+        <!--平仓提醒-->
+        <activity
+            android:name="com.trade.eight.moudle.push.activity.CloseOrderNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/dialog_foractivity_top"/>
+        <!--订单反馈或者交易信息提醒 dialog_foractivity_top_transparent-->
+        <activity
+            android:name="com.trade.eight.moudle.push.activity.OrderAndTradeNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/dialog_foractivity_top_transparent"/>
+        <!--爆仓警告-->
+        <activity
+            android:name="com.trade.eight.moudle.push.activity.TradeFXNoticeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/dialog_foractivity"/>
+        <!--出金提醒-->
+        <activity
+            android:name="com.trade.eight.moudle.push.activity.CashOutNoticeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/dialog_foractivity_top"/>
+
+
+        <!--点心支付宝支付所需-->
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.trade.eight.moudle.trade.jdpay.JDPayBindCardAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.jdpay.JDPayInputSMSAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.jdpay.JDBanksAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.trade.eight.moudle.trade.alipay.AliPayWebAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!--实名认证-->
+        <activity
+            android:name="com.trade.eight.moudle.auth.AuthUploadIdCardAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+             />
+        <!--实名认证拍照-->
+        <activity
+            android:name="com.trade.eight.moudle.auth.AuthTakePhotoAct"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/welcomeStyle"
+            />
+
+        <!--交易历史-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeHistoryAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--出入金历史-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.CashHistoryAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--出金成功-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.cashinout.CashoutSuccessAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--结算账单-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.CheckBalanceAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--平仓详情-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeOrderCloseDetailAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--建仓详情-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeOrderCreateDetailAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--我的期货账户-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.QiHuoMyAccountAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--我的期货账户管理-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.QiHuoMyAccountManagerAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--历史订单-->
+        <activity
+            android:name="com.trade.eight.moudle.trade.activity.TradeOrderHistoryAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <!--出入金以及出入金明细-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.CashInAndOutAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <!--修改资金以及交易密码-->
+        <activity
+            android:name="com.trade.eight.moudle.me.activity.QiHuoUpDatePwdAct"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+
+
+        <!--云信sdk start-->
+        <!-- APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
+            如果 SDKOptions 中提供了，取 SDKOptions 中的值。 -->
+
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="${NimAppKey}" />
+
+        <!-- 声明云信后台服务，如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core" />
+
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core" />
+
+        <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程 -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
+
+        <!-- 安卓保活配置 -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine"></service>
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine"></receiver>
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value="" />
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver" />
+        <!--云信sdk end-->
+
+
+        <!-- 友盟的统计渠道 -->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="main"></meta-data>
+
+
+
+        <!--push start-->
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.${applicationId}"
+            android:exported="true"
+            android:process=":pushservice" />
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复-->
+        <service android:name="com.trade.eight.moudle.push.AppPushIntentService" />
+
+        <!-- 用户自定义服务名 -->
+        <service
+            android:name="com.trade.eight.moudle.push.AppPushCoreService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+
+        <!--push end-->
+
+
+        <!--<service android:name=".service.SmallWindowService" />-->
+
+        <!--版本更新下载服务-->
+        <service
+            android:name="com.trade.eight.moudle.upgradeversion.DownloadService"
+            android:exported="false"></service>
+        <!--视屏悬浮窗口-->
+        <service android:name="com.trade.eight.moudle.floatvideo.service.FloatVideoService" />
+
+
+        <!--mpush start-->
+        <receiver
+            android:name="com.trade.eight.mpush.android.MPushReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.mpush.HEALTH_CHECK" />
+                <action android:name="com.mpush.NOTIFY_CANCEL" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.trade.eight.mpush.android.MPushService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.trade.eight.mpush.android.MPushFakeService" />
+
+        <receiver
+            android:name="com.trade.eight.mpush.coreoption.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.mpush.MESSAGE_RECEIVED" />      <!--收到PUSH消息-->
+                <action android:name="com.mpush.KICK_USER" />             <!--收到踢人消息-->
+                <action android:name="com.mpush.CONNECTIVITY_CHANGE" />   <!--收到链接变化-->
+                <action android:name="com.mpush.HANDSHAKE_OK" />          <!--收到握手成功消息-->
+                <action android:name="com.mpush.BIND_USER" />             <!--收到绑定用户消息-->
+                <action android:name="com.mpush.UNBIND_USER" />           <!--收到解绑用户消息-->
+                <action android:name="com.mpush.ORDERNOTIFY" />           <!--收到订单反馈消息-->
+                <action android:name="com.mpush.quotation" />           <!--收到行情消息-->
+                <!--此值要改为自己的应用的applicationId  @see MPushService-->
+                <category android:name="com.eight.qihuo" />
+            </intent-filter>
+        </receiver>
+        <!--mpush end-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+UMENG_CHANNEL _main main
+UMENG_CHANNEL tengxun tengxun
+UMENG_CHANNEL xiaomi xiaomi
+UMENG_CHANNEL wandoujia wandoujia
+UMENG_CHANNEL baidu baidu
+UMENG_CHANNEL 360 market 360
+UMENG_CHANNEL anzhi anzhi
+UMENG_CHANNEL huawei huawei
+UMENG_CHANNEL lianxiang lianxiang
+UMENG_CHANNEL samsung samsung
+UMENG_CHANNEL chuizi chuizi
+UMENG_CHANNEL oppo oppo
+UMENG_CHANNEL meizu meizu
+UMENG_CHANNEL vivo vivo
+UMENG_CHANNEL jinli jinli
+UMENG_CHANNEL jifeng jifeng
+UMENG_CHANNEL sougou sougou
+UMENG_CHANNEL mumayi mumayi
+UMENG_CHANNEL yingyonghui yingyonghui
+UMENG_CHANNEL pp pp

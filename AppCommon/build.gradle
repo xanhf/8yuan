@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyy_MM_dd", TimeZone.getTimeZone("UTC"))
+}
+
+def releaseAppName() {
+    return "qihuo";
+}
+/*
+* mark：注意这里用as打包的时候，使用v2签名会导致安装失败
+* 发布的时候注意 BaseInterface 开关
+* 1、Log开关
+* 2、BaseInterface.SWITCH_DEPEND_PRODUCT_CLOSE  正式发布的时候用true。依据产品是否停盘 判断是否需要进入页面
+* 3、versionCode versionName  增加
+* 4、maniefest中云信appid
+* 5、个推工程中个推的appid
+* */
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    defaultConfig {
+        applicationId "com.eight.qihuo"
+        minSdkVersion 14
+
+//使用>=23的需要做权限管理，如果不处理，上传头像，直播发图就发不了
+//        targetSdkVersion 24
+        targetSdkVersion 19
+        multiDexEnabled true
+
+        versionCode 1
+        versionName "1.0.0"
+
+        //正式版本appkey
+        manifestPlaceholders = [
+                NimAppKey : "d1541c2a06b1f01232261b9b3bbe82c2",
+                UMENG_APPKEY :"5979498d65b6d66a2c002503"
+        ]
+
+        //测试版本appkey
+//        manifestPlaceholders = [
+////                NimAppKey : "29dac8fefad692e96ce15b29432f11c9",
+//                NimAppKey : "0537bc8e888171a926f604e6db1f8f84",
+//                UMENG_APPKEY :"5979498d65b6d66a2c002503"
+//        ]
+
+        ndk{
+            abiFilters  'armeabi'// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips'
+        }
+    }
+    buildTypes {
+        debug {
+            zipAlignEnabled true
+//            minifyEnabled true
+//            proguardFiles 'proguard-project.txt'
+//            signingConfig signingConfigs.debugSign
+        }
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+            zipAlignEnabled true
+            /*注意这里用as打包的时候，使用v2签名会导致安装失败*/
+//            v2SigningEnabled false
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+
+                    //设置输出文件
+                    def outputFile = output.outputFile
+                    if (variant.buildType.zipAlignEnabled) {
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                            def channel = "";
+//                            channel = variant.productFlavors[0].name;
+//                            if (channel.startsWith("_"))
+//                                channel = channel.replace("_", "");
+//
+//                            //AppName_2015-06-15_2.1_wandoujia.apk
+////                            def fileName = "${releaseAppName()}_${releaseTime()}_${defaultConfig.versionName}_${defaultConfig.versionCode}_${channel}.apk"
+//
+//                            //替换apk包;  AppName_wandoujia.apk
+//                            def fileName = "${releaseAppName()}_${channel}.apk"
+
+                            def fileName = "${releaseAppName()}.apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    } else {
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            //AppName__2015-06-15_2.1_wandoujia_unZipAlign.apk
+                            def fileName = "${releaseAppName()}_${releaseTime()}_${defaultConfig.versionName}_${variant.productFlavors[0].name}_unZipAlign.apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    productFlavors {
+        /*后台更新包 start*/
+        /*后台更新包 end*/
+
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //注意 这里的版本号必须和云信  uikit的appcompat  版本一致
+    compile project(':uikitV3')
+    //个推的配置工程
+    compile project(':Push_GetuiSdk')
+    //期货
+    compile project(':qihuo_account')
+    //eventbus
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //网络请求
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    //Bugly日志收集,其中latest.release指代最新Bugly SDK版本号，
+    // 也可以指定明确的版本号，例如2.2.0
+    //Bugly的 minSdkVersion 必须是10
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //multidex 解决dex过大，高版本没有multidex  需要加入
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+}
+
+

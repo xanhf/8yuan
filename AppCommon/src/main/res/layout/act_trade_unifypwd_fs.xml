@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_layout_common_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:gravity="center"
+        android:text="@string/unifypwd_notify_firststep"
+        android:textColor="@color/app_common_content"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <LinearLayout
+        android:id="@+id/line_unifypwd_gg"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:text="@string/unifypwd_gg_name"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_unifypwd_ggforgetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="@string/unifypwd_forgetpwd"
+                android:textColor="@color/sub_blue"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:layout_marginTop="12dip"
+            android:background="@drawable/input_login_stork_round"
+            android:id="@+id/rel_unifypwd_gg">
+
+            <EditText
+                android:id="@+id/ed_unifypwd_ggpwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/showPwdView"
+                android:background="@null"
+                android:hint="@string/unifypwd_gg_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="16dip"
+                android:singleLine="true"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <RelativeLayout
+                android:id="@+id/showPwdView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:paddingLeft="6dip"
+                android:paddingRight="6dip">
+
+                <ImageView
+                    android:id="@+id/img_showpwd"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_hide_pwd" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_verifyerror_gg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center|left"
+            android:textColor="@color/color_opt_gt"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone"
+            android:text="@string/unifypwd_errortips"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_unifypwd_hg"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:text="@string/unifypwd_hg_name"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_unifypwd_hgforgetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="@string/unifypwd_forgetpwd"
+                android:textColor="@color/sub_blue"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:layout_marginTop="12dip"
+            android:background="@drawable/input_login_stork_round"
+            android:id="@+id/rel_unifypwd_hg">
+
+            <EditText
+                android:id="@+id/ed_unifypwd_hgpwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/showPwdView_hg"
+                android:background="@null"
+                android:hint="@string/unifypwd_hg_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="16dip"
+                android:singleLine="true"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <RelativeLayout
+                android:id="@+id/showPwdView_hg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:paddingLeft="6dip"
+                android:paddingRight="6dip">
+
+                <ImageView
+                    android:id="@+id/img_showpwd_hg"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_hide_pwd" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_verifyerror_hg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center|left"
+            android:textColor="@color/color_opt_gt"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone"
+            android:text="@string/unifypwd_errortips"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_unifypwd_jn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:text="@string/unifypwd_jn_name"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_unifypwd_jnforgetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="@string/unifypwd_forgetpwd"
+                android:textColor="@color/sub_blue"
+                android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:layout_marginTop="12dip"
+            android:background="@drawable/input_login_stork_round"
+            android:id="@+id/rel_unifypwd_jn">
+
+            <EditText
+                android:id="@+id/ed_unifypwd_jnpwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_45dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/showPwdView_jn"
+                android:background="@null"
+                android:hint="@string/unifypwd_jn_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="16dip"
+                android:singleLine="true"
+                android:textColor="@color/app_common_content"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <RelativeLayout
+                android:id="@+id/showPwdView_jn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:paddingLeft="6dip"
+                android:paddingRight="6dip">
+
+                <ImageView
+                    android:id="@+id/img_showpwd_jn"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_hide_pwd" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_verifyerror_jn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center|left"
+            android:textColor="@color/color_opt_gt"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone"
+            android:text="@string/unifypwd_errortips"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:gravity="bottom|center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_agreeprotocl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/cashin_select"
+            android:checked="true"
+            android:paddingLeft="@dimen/margin_16dp"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unifypwd_protocl_tip"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_12sp" />
+
+        <TextView
+            android:id="@+id/tv_unifypwd_protocl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="各项条款"
+            android:textColor="@color/sub_blue"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_marginBottom="@dimen/margin_18dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_45dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/dialog_trade_submit_blue"
+            android:gravity="center"
+            android:text="@string/unifypwd_nextstep"
+            android:textColor="@color/quick_close_submit"
+            android:textSize="@dimen/text_size_15sp" />
+
+    </RelativeLayout>
+</LinearLayout>

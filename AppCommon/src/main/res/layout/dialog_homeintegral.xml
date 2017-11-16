@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <Button
+        android:layout_width="@dimen/margin_36dp"
+        android:layout_height="@dimen/margin_36dp"
+        android:background="@drawable/img_dialogclose_bg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btn_dialog_close"
+        android:layout_marginRight="5dip"/>
+    
+    <ImageView
+        android:layout_width="@dimen/margin_266dp"
+        android:layout_height="@dimen/margin_333dp"
+        android:src="@drawable/img_homeintegral_dlgbg"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/btn_dialogcancle"
+            android:gravity="center"
+            android:id="@+id/btn_cancle"
+            android:text="稍后再说"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/white"
+            />
+        <View
+            android:layout_width="@dimen/margin_12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="@dimen/margin_36dp"
+            android:background="@drawable/dialog_trade_submit_integral"
+            android:textColor="@color/dialog_integral_confirm"
+            android:id="@+id/btn_commit"
+            android:text="查看积分商城"
+            android:textSize="@dimen/text_size_15sp"/>
+    </LinearLayout>
+</RelativeLayout>

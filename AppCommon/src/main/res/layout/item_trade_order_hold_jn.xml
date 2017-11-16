@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_common_list_divider"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="8dip"/>
+    <LinearLayout
+        android:id="@+id/groupView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/hold_time_lable"
+            android:textSize="@dimen/tv_hint" />
+
+        <TextView
+            android:id="@+id/tv_group_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/hold_time_lable"
+            android:textSize="@dimen/tv_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@color/sub_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip">
+
+        <TextView
+            android:id="@+id/text_productname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:gravity="center|left"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_17sp"
+            android:layout_weight="1.0"
+            android:textStyle="bold"
+            android:text="吉尿素"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/color_opt_lt"
+            android:text="2450"
+            android:id="@+id/text_current_price"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/color_opt_lt"
+            android:text="+19"
+            android:id="@+id/text_current_margin"
+            android:layout_marginLeft="@dimen/margin_8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColor="@color/color_opt_lt"
+            android:text="+0.47%"
+            android:id="@+id/text_current_mp"
+            android:layout_marginLeft="@dimen/margin_8dp"/>
+        <TextView
+            android:layout_width="7dip"
+            android:layout_height="12dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/home_icon_more"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lable01"
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:background="@drawable/bg_normal_white_press_grey"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/tvpeHint"
+                android:layout_width="3dip"
+                android:layout_height="16dip"
+                android:background="@color/color_opt_gt" />
+
+            <TextView
+                android:id="@+id/tv_typeBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:maxWidth="60dip"
+                android:singleLine="true"
+                android:text="@string/trade_buy_up"
+                android:textColor="@color/trade_up"
+                android:textSize="@dimen/hold_title" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:singleLine="true"
+                android:text="白银60g(10元/手)"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_title"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/imgQuan"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_marginLeft="5dip"
+                android:src="@drawable/icon_trade_quan"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="16dip"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/trade_surplus"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_makeMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:singleLine="true"
+                android:text="-39000"
+                android:textColor="@color/trade_down"
+                android:textSize="@dimen/hold_money"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:singleLine="true"
+                android:text="元"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_arrow"
+            android:layout_width="7dip"
+            android:layout_height="12dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:visibility="gone"
+            android:background="@drawable/home_icon_more" />
+    </LinearLayout>
+
+    <include layout="@layout/app_layout_common_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="0dip"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+        android:paddingTop="16dip">
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="建仓价"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_priceCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="39000"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="@string/trade_mostnew_point"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_priceHold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="39000"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item"
+                android:textStyle="normal"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/tv_hint"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="7dip"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+        android:paddingTop="7dip">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/trade_create_fee"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="39000"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:singleLine="true"
+                android:text="元"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="@string/trade_guoye_fee"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_deferredFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="39000"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:singleLine="true"
+                android:text="元"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/checkDeferredView"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_marginLeft="12dip"
+                android:background="@drawable/icon_hold_guoye"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="16dip"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/trade_create_time"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/text_createordertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:singleLine="true"
+                android:text="39000"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/hold_item"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:background="@color/trade_hold_item_lable_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="10dip">
+
+        <LinearLayout
+            android:id="@+id/set_profitView"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="止损"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_zhisun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dip"
+                android:singleLine="true"
+                android:text="不限"
+                android:textColor="@color/sub_blue"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="/"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="止盈"
+                android:textColor="@color/hold_lable"
+                android:textSize="@dimen/hold_item" />
+
+            <TextView
+                android:id="@+id/tv_zhiying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dip"
+                android:singleLine="true"
+                android:text="不限"
+                android:textColor="@color/sub_blue"
+                android:textSize="@dimen/hold_item" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/set_deferredView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:text="持仓过夜"
+                    android:textColor="@color/hold_lable"
+                    android:textSize="@dimen/hold_item" />
+
+                <TextView
+                    android:id="@+id/tv_deferred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:singleLine="true"
+                    android:text="开启"
+                    android:textColor="@color/sub_blue"
+                    android:textSize="@dimen/hold_item" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dip"
+                    android:singleLine="true"
+                    android:text=">"
+                    android:textColor="@color/sub_blue"
+                    android:textSize="@dimen/hold_title" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="1dip"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="56dip"
+                android:layout_height="30dip"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/dialog_trade_submit_blue"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="平仓"
+                android:textColor="@color/white"
+                android:textSize="@dimen/hold_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

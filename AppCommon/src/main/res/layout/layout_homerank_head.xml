@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_rankhead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_216dp"
+        android:background="@drawable/img_homerank_headbg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_homerank_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <RelativeLayout
+            android:id="@+id/line_homerank_first"
+            android:layout_width="70dip"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="63dp"
+                android:layout_height="64dp"
+                android:id="@+id/rel_homerank_firsthead"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/img_homerank_first_head"
+                    android:layout_width="63dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/img_ranhhead_first" />
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/img_ranhhead_first" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="第一名"
+                android:singleLine="true"
+                android:id="@+id/tv_homerank_first_name"
+                android:layout_below="@+id/rel_homerank_firsthead"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_marginTop="@dimen/margin_4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tv_homerank_first_name">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="盈利"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_homerank_first_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4dp"
+                    android:text="100%"
+                    android:textColor="@color/trade_up"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_homerank_first_voucher"
+                android:layout_width="46dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:background="@drawable/home_pic_ticket_red"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="￥--"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/trade_up"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_homerank_second"
+            android:layout_width="70dip"
+            android:layout_height="120dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/margin_24dp"
+            android:layout_marginLeft="@dimen/margin_40dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="50dip"
+                android:layout_height="52dip"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/rel_homerank_secondhead">
+
+                <ImageView
+                    android:id="@+id/img_homerank_second_head"
+                    android:layout_width="50dip"
+                    android:layout_height="52dip"
+                    android:background="@drawable/img_ranhhead_second" />
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="52dip"
+                    android:background="@drawable/img_ranhhead_second" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="第二名"
+                android:singleLine="true"
+                android:id="@+id/tv_homerank_second_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:layout_below="@id/rel_homerank_secondhead"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_homerank_second_name">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="盈利"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_homerank_second_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4dp"
+                    android:text="100%"
+                    android:textColor="@color/trade_up"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_homerank_second_voucher"
+                android:layout_width="46dip"
+                android:layout_height="20dip"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/home_pic_ticket_red"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="￥--"
+                android:textColor="@color/trade_up"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_homerank_third"
+            android:layout_width="70dip"
+            android:layout_height="120dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/margin_24dp"
+            android:layout_marginRight="@dimen/margin_40dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="50dip"
+                android:layout_height="52dip"
+                android:id="@+id/rel_homerank_thirdhead"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/img_homerank_third_head"
+                    android:layout_width="50dip"
+                    android:layout_height="52dip"
+                    android:background="@drawable/img_ranhhead_third" />
+
+                <ImageView
+                    android:layout_width="50dip"
+                    android:layout_height="52dip"
+                    android:background="@drawable/img_ranhhead_third" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="第三名"
+                android:id="@+id/tv_homerank_third_name"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15sp"
+                android:layout_below="@+id/rel_homerank_thirdhead"
+                android:layout_marginTop="@dimen/margin_4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tv_homerank_third_name">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="盈利"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_homerank_third_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4dp"
+                    android:text="100%"
+                    android:textColor="@color/trade_up"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_homerank_third_voucher"
+                android:layout_width="46dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:background="@drawable/home_pic_ticket_red"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:text="￥--"
+                android:textColor="@color/trade_up"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rankhead_empty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_91dp"
+        android:background="@drawable/img_homenorank_headbg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:gravity="center"
+            android:text="今天榜首正虚位以待...."
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_15sp"
+            android:id="@+id/tv_rankhead_empty"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_72dp"
+        android:gravity="center"
+        >
+        <Button
+            android:layout_width="@dimen/margin_22dp"
+            android:layout_height="@dimen/margin_22dp"
+            android:background="@drawable/img_pn_delete"
+            android:id="@+id/btn_pn_dele"
+            android:layout_marginLeft="@dimen/margin_16dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:orientation="vertical"
+            android:gravity="center|left"
+            android:id="@+id/line_pn_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_28dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:id="@+id/text_noticetype"/>
+                <TextView
+                    android:layout_width="@dimen/margin_60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="@string/product_notice_array1"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="2888"
+                    android:id="@+id/text_pn_custompoint"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:layout_marginLeft="@dimen/margin_8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_16dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="@dimen/margin_60dp"
+                    android:layout_height="@dimen/margin_16dp"
+                    android:gravity="center|left"
+                    android:text="@string/product_notice_range1"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_16dp"
+                    android:gravity="center|left"
+                    android:text="5点"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:layout_marginLeft="@dimen/margin_8dp"
+                    android:id="@+id/text_pn_customrange"/>
+                <View
+                    android:layout_width="@dimen/margin_0.5dp"
+                    android:layout_height="@dimen/margin_8dp"
+                    android:background="@color/grey"
+                    android:layout_marginLeft="@dimen/margin_8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_16dp"
+                    android:gravity="center|left"
+                    android:text="提醒当日有效"
+                    android:textColor="@color/grey"
+                    android:id="@+id/text_pn_customcircle"
+                    android:textSize="@dimen/text_size_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="@dimen/margin_40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/img_pn_edit"
+            android:gravity="center">
+            <ImageView style="@style/MeItemIconMoreStyle"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:background="@color/sub_bg"/>
+</LinearLayout>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_app_bg"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:background="@color/sub_bg"
+        android:text="@string/lable_create"
+        android:textSize="@dimen/text_size_15"
+        android:gravity="center"
+        android:textColor="@color/app_common_content"
+        />
+    <com.trade.eight.view.pulltorefresh.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/optional_title"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+</LinearLayout>

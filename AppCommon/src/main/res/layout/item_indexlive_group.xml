@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_20sp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:textColor="@color/c_464646"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:id="@+id/text_indexlive_group"/>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50dp"
+        android:background="@color/sub_bg"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/app_common_content"
+        android:text="@string/trade_close"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <ExpandableListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparent"
+        android:dividerHeight="0dip"
+        android:divider="@null"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_quick_close_cancle"
+            android:text="取消"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_quick_close_submit"
+            android:text="快速平仓"
+            android:textColor="@color/quick_close_submit"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </LinearLayout>
+</LinearLayout>

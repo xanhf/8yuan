@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical"
+    android:id="@+id/line_root">
+
+
+    <com.trade.eight.view.AppTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"></com.trade.eight.view.AppTitleView>
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="86dip"
+        android:layout_marginTop="0dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:paddingLeft="20dip"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="头像" />
+
+            <com.trade.eight.view.CircleImageView
+                android:id="@+id/img_person"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android_custom:circle_style="round"
+                android_custom:roundradius="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imgMore"
+                android:onClick="myClick"
+                android:src="@drawable/img_me_headdefault" />
+
+            <ImageView
+                android:id="@+id/imgMore"
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="20dip" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70"/>
+
+    <LinearLayout
+        android:id="@+id/ll_nick"
+        style="@style/UserSettingItemStyle"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_10dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/margin_10dp"
+            android:paddingTop="@dimen/margin_10dp">
+
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="名字" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="多得多"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="10dip" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70"/>
+
+    <LinearLayout
+        android:id="@+id/ll_uname"
+        style="@style/UserSettingItemStyle"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginBottom="@dimen/margin_10dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="手机号" />
+
+            <TextView
+                android:id="@+id/tv_uname"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="多得多"
+                android:textColor="@color/c_464646"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="20dip"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pwd"
+        style="@style/UserSettingItemStyle"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:visibility="visible"
+        android:layout_marginTop="30dip"
+        android:layout_marginBottom="@dimen/margin_10dp">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="重置登录密码" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/c_464646"
+                android:textSize="18sp" />
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="20dip" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70"/>
+
+    <LinearLayout
+        android:id="@+id/ll_unifypwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:layout_weight="1.0"
+            android:paddingLeft="@dimen/margin_20dp">
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="@string/ll_us_unifypwd_set"
+                android:id="@+id/text_unifypwd"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/app_common_content"
+                android:textSize="18sp" />
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="20dip" />
+
+        </LinearLayout>
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_change_tradepwd"
+        style="@style/UserSettingItemStyle"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <TextView
+                style="@style/UserSettingItemStyleItemTextStyle"
+                android:text="@string/ll_us_change_tradepwd"
+                android:id="@+id/text_change_tradepwd"/>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:id="@+id/text_change_tradepwdtips"/>
+
+            <ImageView
+                style="@style/MeItemIconMoreStyle"
+                android:layout_marginLeft="10dip" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0.5dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:background="@color/c_E6E7EA_70"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/btn_loginout"
+        android:layout_width="wrap_content"
+        android:layout_height="45dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@null"
+        android:onClick="myClick"
+        android:text="退出当前账号"
+        android:gravity="left|bottom"
+        android:textColor="@color/c_BB8B7D"
+        android:textSize="17sp" />
+
+</LinearLayout>

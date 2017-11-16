@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <com.trade.eight.view.trade.TradeHeadView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trade_view_liveclose"></com.trade.eight.view.trade.TradeHeadView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:gravity="bottom"
+        android:layout_below="@+id/view_subline"
+        android:id="@+id/view_tab">
+        <View
+            android:id="@+id/imgCheck"
+            android:layout_width="@dimen/margin_24dp"
+            android:layout_height="@dimen/margin_24dp"
+            android:layout_marginRight="@dimen/margin_8dp"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_24dp"
+            android:textSize="@dimen/text_size_12sp"
+            android:text="@string/lable_instrument"
+            android:layout_weight="1.2"
+            android:textColor="@color/c_999999_80"
+            android:gravity="left"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_24dp"
+            android:textSize="@dimen/text_size_15sp"
+            android:layout_weight="1.0"
+            android:textColor="@color/c_999999"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_24dp"
+            android:textSize="@dimen/text_size_12sp"
+            android:text="@string/trade_order_ccjj"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:textColor="@color/c_999999_80"/>
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/margin_24dp"
+            android:textSize="@dimen/text_size_12sp"
+            android:text="@string/trade_hold_profit"
+            android:textColor="@color/c_999999_80"
+            android:layout_weight="1.0"
+            android:gravity="right"/>
+    </LinearLayout>
+</LinearLayout>

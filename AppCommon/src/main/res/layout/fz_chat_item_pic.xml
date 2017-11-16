@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="5dip"
+    android:paddingLeft="@dimen/margin_16dp"
+    android:paddingRight="@dimen/margin_16dp"
+    android:paddingTop="5dip">
+    <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/head_avater"
+        android:layout_marginRight="5dip"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_level"
+        android:layout_width="18dip"
+        android:layout_height="12dip"
+        android:src="@drawable/live_level_v1"
+        android:visibility="gone"
+        android:layout_marginTop="5dip"
+        android:layout_gravity="left|top"
+        android:layout_marginRight="5dip"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/app_common_content"
+        android:textSize="@dimen/text_size_15" />
+
+    <include layout="@layout/nim_message_item_picture" />
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/tabView"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_centerVertical="true"
+        android:background="@color/sub_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/quick_trade_tab_bg"
+            android:gravity="center"
+            android:id="@+id/line_title_0">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/normal_black_selected_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:text="哈贵所"
+                android:id="@+id/text_title_0"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/quick_trade_tab_bg"
+            android:gravity="center"
+            android:id="@+id/line_title_1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/normal_black_selected_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:text="农交所"
+                android:id="@+id/text_title_1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/quick_trade_tab_bg"
+            android:gravity="center"
+            android:id="@+id/line_title_2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/normal_black_selected_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:text="广贵所"
+                android:id="@+id/text_title_2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/line_content">
+            <com.trade.eight.view.pulltorefresh.PullToRefreshExpandListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:dividerHeight="0dip"
+                android:divider="@null"
+                android:layout_marginBottom="44dip"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_quick_close_cancle"
+                    android:text="取消"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/dialog_quick_close_submit"
+                    android:text="快速平仓"
+                    android:textColor="@color/quick_close_submit"
+                    android:textSize="@dimen/text_size_17sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    <include layout="@layout/app_layout_nodata" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 19
+
+        //正式的版本
+        manifestPlaceholders = [
+                GETUI_APP_ID : "zQOhva6V5m5FITRE3Nz5D8",
+                GETUI_APP_KEY : "nlPLAt6Gkr6sJOxHaOISw",
+                GETUI_APP_SECRET : "BafQE2aRwd83aNbjyAKJ4A"
+        ]
+
+        //test
+//        manifestPlaceholders = [
+//                GETUI_APP_ID : "YAjVJsqZDR7CXTA0bqtHp4",
+//                GETUI_APP_KEY : "CoyySd7BZ28fN5MHPjgbl3",
+//                GETUI_APP_SECRET : "RQbjppqM7m66CbhqwVpqo7"
+//        ]
+
+
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:25.0.0'
+}

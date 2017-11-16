@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
+    android:fitsSystemWindows="@bool/fitsSystemWindows"
+    android:orientation="vertical">
+
+    <com.trade.eight.view.pulltorefresh.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/backLayout"
+        android:layout_marginBottom="@dimen/margin_60dp"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+    <RelativeLayout
+        android:id="@+id/rela_homerank_bottomshare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/line_homerank_notlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_4dp"
+                android:background="@drawable/white_gradient" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_56dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center|left"
+                    android:text="登录后可晒单上榜"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <Button
+                    android:id="@+id/btn_homerank_gologin"
+                    android:layout_width="@dimen/margin_80dp"
+                    android:layout_height="@dimen/margin_32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tradeclosedetail_shareorder"
+                    android:gravity="center"
+                    android:text="登录/注册"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_homerank_notin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_4dp"
+                android:background="@drawable/white_gradient" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_56dp"
+                android:background="@color/white">
+
+                <com.trade.eight.view.CircleImageView
+                    android:id="@+id/img_homerank_notin"
+                    android:layout_width="@dimen/margin_32dp"
+                    android:layout_height="@dimen/margin_32dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:layout_marginRight="@dimen/margin_12dp"
+                    android:src="@drawable/liveroom_icon_person" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="立刻晒单，占据榜首"
+                    android:textColor="@color/app_common_content"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_homerank_alreadyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_4dp"
+                android:background="@drawable/white_gradient" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_56dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/margin_62dp"
+                        android:layout_height="@dimen/margin_36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_11dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rela_homerank_mostnewone"
+                            android:layout_width="@dimen/margin_28dp"
+                            android:layout_height="@dimen/margin_28dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/margin_5dp"
+                            android:background="@drawable/white_60alphacircle"
+                            android:padding="2dip">
+
+                            <com.trade.eight.view.CircleImageView
+                                android:id="@+id/img_homerank_mostnewone"
+                                android:layout_width="@dimen/margin_24dp"
+                                android:layout_height="@dimen/margin_24dp"
+                                android:alpha="0.3"
+                                android:src="@drawable/liveroom_icon_person" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_homerank_mostnewtwo"
+                            android:layout_width="@dimen/margin_32dp"
+                            android:layout_height="@dimen/margin_32dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/margin_15dp"
+                            android:background="@drawable/white_60alphacircle"
+                            android:padding="2dip">
+
+                            <com.trade.eight.view.CircleImageView
+                                android:id="@+id/img_homerank_mostnewtwo"
+                                android:layout_width="@dimen/margin_28dp"
+                                android:layout_height="@dimen/margin_28dp"
+                                android:alpha="0.6"
+                                android:padding="@dimen/margin_8dp"
+                                android:src="@drawable/liveroom_icon_person" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rela_homerank_mostnewtwo_animation"
+                            android:layout_width="@dimen/margin_32dp"
+                            android:layout_height="@dimen/margin_32dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/margin_15dp"
+                            android:background="@drawable/white_60alphacircle"
+                            android:padding="2dip">
+
+                            <com.trade.eight.view.CircleImageView
+                                android:id="@+id/img_homerank_mostnewtwo_animation"
+                                android:layout_width="@dimen/margin_28dp"
+                                android:layout_height="@dimen/margin_28dp"
+                                android:layout_centerInParent="true"
+                                android:alpha="0.6"
+                                android:src="@drawable/liveroom_icon_person"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rela_homerank_mostnewthree_animation"
+                            android:layout_width="@dimen/margin_36dp"
+                            android:layout_height="@dimen/margin_36dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:background="@drawable/white_circle"
+                            android:padding="2dip">
+
+                            <com.trade.eight.view.CircleImageView
+                                android:id="@+id/img_homerank_mostnewthree_animation"
+                                android:layout_width="@dimen/margin_32dp"
+                                android:layout_height="@dimen/margin_32dp"
+                                android:layout_centerInParent="true"
+
+                                android:layout_gravity="center_vertical|right"
+                                android:src="@drawable/liveroom_icon_person" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rela_homerank_mostnewthree"
+                            android:layout_width="@dimen/margin_36dp"
+                            android:layout_height="@dimen/margin_36dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:background="@drawable/white_circle"
+                            android:padding="2dip">
+
+                            <com.trade.eight.view.CircleImageView
+                                android:id="@+id/img_homerank_mostnewthree"
+                                android:layout_width="@dimen/margin_32dp"
+                                android:layout_height="@dimen/margin_32dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical|right"
+                                android:src="@drawable/liveroom_icon_person" />
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <!--<FrameLayout--><!--android:layout_width="@dimen/margin_58dp"--><!--android:layout_height="@dimen/margin_32dp"--><!--android:layout_gravity="center"--><!--android:layout_marginLeft="@dimen/margin_11dp">-->
+
+                    <!--<com.trade.eight.view.CircleImageView--><!--android:id="@+id/img_homerank_mostnewone"--><!--android:layout_width="@dimen/margin_24dp"--><!--android:layout_height="@dimen/margin_24dp"--><!--android:layout_gravity="center_vertical"--><!--android:layout_marginLeft="@dimen/margin_5dp"--><!--android:alpha="0.3"--><!--android:background="@drawable/white_60alphacircle"--><!--android:padding="@dimen/margin_8dp"--><!--android:src="@drawable/liveroom_icon_person" />-->
+
+                    <!--<com.trade.eight.view.CircleImageView--><!--android:id="@+id/img_homerank_mostnewtwo"--><!--android:layout_width="@dimen/margin_28dp"--><!--android:layout_height="@dimen/margin_28dp"--><!--android:layout_gravity="center_vertical"--><!--android:layout_marginLeft="@dimen/margin_15dp"--><!--android:alpha="0.6"--><!--android:background="@drawable/white_60alphacircle"--><!--android:padding="@dimen/margin_8dp"--><!--android:src="@drawable/liveroom_icon_person" />-->
+
+                    <!--<com.trade.eight.view.CircleImageView--><!--android:id="@+id/img_homerank_mostnewtwo_animation"--><!--android:layout_width="@dimen/margin_28dp"--><!--android:layout_height="@dimen/margin_28dp"--><!--android:layout_gravity="center_vertical"--><!--android:layout_marginLeft="@dimen/margin_15dp"--><!--android:alpha="0.6"--><!--android:background="@drawable/white_60alphacircle"--><!--android:padding="@dimen/margin_8dp"--><!--android:src="@drawable/liveroom_icon_person"--><!--android:visibility="gone" />-->
+
+                    <!--<RelativeLayout--><!--android:layout_width="@dimen/margin_36dp"--><!--android:layout_height="@dimen/margin_36dp"--><!--android:padding="2dip"--><!--&gt;--><!--<com.trade.eight.view.CircleImageView--><!--android:id="@+id/img_homerank_mostnewthree_animation"--><!--android:layout_width="@dimen/margin_32dp"--><!--android:layout_height="@dimen/margin_32dp"--><!--android:layout_gravity="center_vertical|right"--><!--android:background="@drawable/white_circle"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/liveroom_icon_person" />--><!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout--><!--android:layout_width="@dimen/margin_36dp"--><!--android:layout_height="@dimen/margin_36dp"--><!--android:padding="2dip"--><!--&gt;--><!--<com.trade.eight.view.CircleImageView--><!--android:id="@+id/img_homerank_mostnewthree"--><!--android:layout_width="@dimen/margin_32dp"--><!--android:layout_height="@dimen/margin_32dp"--><!--android:layout_gravity="center_vertical|right"--><!--android:background="@drawable/white_circle"--><!--android:layout_centerInParent="true"--><!--android:src="@drawable/liveroom_icon_person" />--><!--</RelativeLayout>--><!--</FrameLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_16dp"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:text="晒单用户"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_homerank_sharecount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_16dp"
+                            android:layout_marginRight="@dimen/margin_20dp"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:text="2345位"
+                            android:textColor="@color/app_common_content"
+                            android:textSize="@dimen/text_size_15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/margin_0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_12dp"
+                    android:background="@color/sub_bg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.trade.eight.view.CircleImageView
+                        android:id="@+id/img_homerank_myself"
+                        android:layout_width="@dimen/margin_32dp"
+                        android:layout_height="@dimen/margin_32dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_12dp"
+                        android:src="@drawable/liveroom_icon_person" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_8dp"
+                            android:layout_toRightOf="@+id/img_homerank_myself"
+                            android:text="我的排名"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_homerank_myrank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_homerank_myrank"
+                            android:layout_marginTop="@dimen/margin_4dp"
+                            android:layout_toRightOf="@+id/img_homerank_myself"
+                            android:text="无晒单记录"
+                            android:textColor="@color/app_common_content"
+                            android:textSize="@dimen/text_size_15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_homerank_shareorder"
+            android:layout_width="@dimen/margin_56dp"
+            android:layout_height="@dimen/margin_56dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_12dp"
+            android:background="@drawable/fab"
+            android:text="@string/homerank_shareorder"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/backLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_44dp"
+        android:background="@drawable/bg_nav_bar"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/app_layout_backview" />
+
+        <TextView style="@style/common_title_text" />
+
+        <Button
+            android:id="@+id/btn_homerank_tips"
+            android:layout_width="@dimen/margin_20dp"
+            android:layout_height="@dimen/margin_20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/img_homerank_tipsicon"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/btn_help_lable"
+            android:textSize="@dimen/text_size_15sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

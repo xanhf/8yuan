@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/my_item_press"
+        android:gravity="center"
+        android:text="设置头像"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#f0f2f5" />
+    <TextView
+        android:id="@+id/tv_take"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/my_item_press"
+        android:gravity="center"
+        android:text="拍照"
+        android:textColor="#24273e"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#f0f2f5" />
+
+    <TextView
+        android:id="@+id/tv_choose"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/my_item_press"
+        android:gravity="center"
+        android:text="从相册中选择"
+        android:textColor="#24273e"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dip"
+        android:background="#f0f2f5" />
+
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/my_item_press"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#999999"
+        android:textSize="15sp" />
+</LinearLayout>

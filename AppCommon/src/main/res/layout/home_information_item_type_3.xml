@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_28dp"
+        android:background="@color/sub_bg"
+        android:gravity="center|left"
+        android:paddingLeft="10dip"
+        android:text="2016-05-05"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_devider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_12dp"
+        android:background="@color/color_common_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_10dp">
+
+        <TextView
+            android:id="@+id/tv_homeinformation_abstract"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp">
+
+            <TextView
+                android:id="@+id/tv_homeinformation_ri"
+                android:layout_width="@dimen/margin_28dp"
+                android:layout_height="@dimen/margin_32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/img_homeinformation_shi"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_4dp"
+                android:text="01"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_homeinformation_shi"
+                android:layout_width="@dimen/margin_28dp"
+                android:layout_height="@dimen/margin_32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:background="@drawable/img_homeinformation_fen"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_4dp"
+                android:text="01"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_homeinformation_fen"
+                android:layout_width="@dimen/margin_28dp"
+                android:layout_height="@dimen/margin_32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_4dp"
+                android:background="@drawable/img_homeinformation_second"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_4dp"
+                android:text="01"
+                android:textColor="@color/app_common_content"
+                android:textSize="@dimen/text_size_17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_homeinformation_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10dp"
+        android:lineSpacingExtra="@dimen/margin_4dp"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_homeinformation_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_29dp"
+                android:layout_weight="1.0"
+                android:text="+1"
+                android:textColor="@color/trade_up"
+                android:textSize="@dimen/text_size_12sp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_homeinformation_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_29dp"
+                android:layout_weight="1.0"
+                android:text="+1"
+                android:textColor="@color/trade_down"
+                android:textSize="@dimen/text_size_12sp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_38dp"
+                android:layout_weight="1.0">
+
+                <Button
+                    android:id="@+id/btn_homeinformation_red"
+                    android:layout_width="@dimen/margin_38dp"
+                    android:layout_height="@dimen/margin_38dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_homeinformation_red"
+                    android:focusable="false" />
+
+                <TextView
+                    android:id="@+id/tv_homeinformation_redhold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@+id/btn_homeinformation_red"
+                    android:text="@string/home_information_hold"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_homeinformation_redhold_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@+id/btn_homeinformation_red"
+                    android:gravity="bottom"
+                    android:text="@string/home_information_redhold"
+                    android:textColor="@color/trade_up"
+                    android:textSize="@dimen/text_size_20sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/margin_0.5dp"
+                android:layout_height="@dimen/margin_38dp"
+                android:background="@color/sub_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_38dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_weight="1.0">
+
+                <Button
+                    android:id="@+id/btn_homeinformation_green"
+                    android:layout_width="@dimen/margin_38dp"
+                    android:layout_height="@dimen/margin_38dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_homeinformation_green"
+                    android:focusable="false" />
+
+                <TextView
+                    android:id="@+id/tv_homeinformation_greenhold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@+id/btn_homeinformation_green"
+                    android:text="@string/home_information_hold"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_homeinformation_greenhold_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_toRightOf="@+id/btn_homeinformation_green"
+                    android:gravity="bottom"
+                    android:text="@string/home_information_redhold"
+                    android:textColor="@color/trade_down"
+                    android:textSize="@dimen/text_size_20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

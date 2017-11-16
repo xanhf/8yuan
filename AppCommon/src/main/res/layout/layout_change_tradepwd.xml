@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_change_tradepwd_gg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="广贵所"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp" />
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_change_tradepwd_hg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="哈贵所"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp" />
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_change_tradepwd_jn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="myClick"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="农交所"
+            android:textColor="@color/app_common_content"
+            android:textSize="@dimen/text_size_15sp" />
+        <include layout="@layout/app_layout_common_line" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_change_tradepwd_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_15sp" />
+</LinearLayout>

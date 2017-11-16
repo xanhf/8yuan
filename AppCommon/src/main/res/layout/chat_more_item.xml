@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="bottom|center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dip"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/moreMsgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_more_item"
+        android:gravity="center"
+        android:paddingLeft="24dip"
+        android:paddingRight="24dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="9dip"
+            android:layout_height="9dip"
+            android:src="@drawable/ic_more_arrow_up" />
+
+        <TextView
+            android:id="@+id/tv_moreMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:gravity="center_vertical"
+            android:minHeight="30dip"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+</LinearLayout>

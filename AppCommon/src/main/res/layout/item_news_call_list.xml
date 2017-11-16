@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/line_timezone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center"
+            android:id="@+id/view_topline"
+            android:background="@color/c_999999"/>
+        <TextView
+            android:id="@+id/icon"
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:background="@color/c_999999" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"
+            android:id="@+id/effect_bottom"
+            android:layout_gravity="center"
+            android:layerType="software"
+            android:background="@color/c_999999"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_12dp">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="16dip"
+            android:layout_alignLeft="@+id/line_timezone"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="@color/c_999999_80"
+            android:textSize="14dip"/>
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/line_timezone"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginTop="8dip"
+            android:lineSpacingExtra="@dimen/margin_5dp"
+            android:text="--"
+            android:textColor="@color/c_464646"
+            android:textSize="14dip"
+            android:paddingBottom="@dimen/margin_12dp"/>
+    </LinearLayout>
+</LinearLayout>

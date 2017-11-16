@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_8dp"
+        android:background="@color/sub_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_trade_order_cashin"
+        style="@style/MeItemStyle"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/MeItemTextStyle"
+                android:text="@string/trade_order_cashin" />
+
+            <TextView
+                android:id="@+id/text_trade_order_cashintips"
+                style="@style/MeItemTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView
+                android:id="@+id/img_trade_order_cashin"
+                style="@style/MeItemIconMoreStyle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/app_layout_common_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_trade_order_cashout"
+        style="@style/MeItemStyle"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/MeItemTextStyle"
+                android:text="@string/trade_order_cashout" />
+            <TextView
+                android:id="@+id/text_trade_order_cashouttips"
+                style="@style/MeItemTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <ImageView style="@style/MeItemIconMoreStyle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_8dp"
+        android:background="@color/sub_bg"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_trade_order_mangaecard"
+        style="@style/MeItemStyle"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/MeItemTextStyle"
+                android:text="@string/trade_order_mangaecard" />
+
+            <ImageView style="@style/MeItemIconMoreStyle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_8dp"
+        android:background="@color/sub_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_trade_order_tradehistory"
+        style="@style/MeItemStyle"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/MeItemTextStyle"
+                android:text="@string/trade_order_tradehistory" />
+
+            <ImageView style="@style/MeItemIconMoreStyle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/app_layout_common_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_trade_order_cashhistory"
+        style="@style/MeItemStyle"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/MeItemTextStyle"
+                android:text="@string/trade_order_cashhistory" />
+
+            <ImageView style="@style/MeItemIconMoreStyle" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

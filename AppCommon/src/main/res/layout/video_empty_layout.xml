@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emptyView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="55dip"
+        android:layout_height="30dip"
+        android:layout_marginBottom="5dip"
+        android:src="@drawable/ic_video_empty" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:lineSpacingExtra="8dip"
+        android:text="@string/video_empty"
+        android:textColor="@color/c_999999"
+        android:textSize="@dimen/text_size_15sp"
+        android:visibility="visible" />
+
+</LinearLayout>
